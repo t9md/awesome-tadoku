@@ -1,22 +1,40 @@
 <!-- TOC START min:1 max:3 link:true update:true -->
 - [人・Blog](#blog)
 - [その他](#)
-- [サービス・ツール](#-1)
+- [図書館・多読ブッククラブ](#-1)
+- [サービス・ツール](#-2)
 
 <!-- TOC END -->
 
+多読を行っている t9md が
+
 # 人・Blog
 
-記事への直リンクを貼っている。多読の先人達の記事を読んで、モチベーションを高めたり、襟を正したりしてみよう。
+多読の先人達の記事を読んで、モチベーションを高めたり、襟を正したりしてみよう。  
+記事への直リンクを貼っています。
 
 - [英語上達完全マップを10ヶ月やってみた](http://kanzenmap.nomaki.jp/)
 - [多読１０年間のまとめ①　読了冊数、語数、YLの推移](http://yukomillennium.com/?p=5725)
 - [英語｢超｣上級者は例外なく多聴多読していた件](http://enjoylifeinenglish.blog112.fc2.com/blog-entry-106.html)
+- [読んで読んで読みまくれ！多読・多聴が欠かせない！](http://mekarourokoeigo.hatenablog.com/entry/2015/10/09/101515)
+
+- 多読って有用なの？そもそも何？的な疑問に対する回答
+  - [理想の英語学習とは？　最新の言語学研究より](http://mekarourokoeigo.hatenablog.com/entry/2015/10/17/170021)
+  - [本の紹介: 英語ができないあなたは悪くない！](http://mekarourokoeigo.hatenablog.com/entry/2016/05/30/190000)
+  - [多読・Tadoku入門](https://tadoku.org/english/)
+    - NPO多言語多読の多読入門記事
 
 # その他
 
 - [えいらく](https://ei-raku.com/)
   - 超優良サイト、ゲームや漫画を通して、楽しんで英語に触れる方法の紹介。サイトの登録方法等を含め、"はじめ方"がとても親切にかかれていて素晴らしすぎる。このサイトから多読のための様々なサービス、アプローチに出会える！
+
+# 図書館・多読ブッククラブ
+
+- 四谷図書館: 新宿区・四谷の図書館、多読の本多数
+- SEG社会人ブッククラブ(http://www.seg.co.jp/bookclub/)
+- [NPO多言語多読の講座](https://tadoku.org/english/tadoku-courses/)を受講すると、ライブラリにある本も借りられる。北新宿にある
+- [多読用図書が読める図書館リスト](http://www.cosmopier.com/library/): これが全てではない or 情報が最新ではない、という印象
 
 # サービス・ツール
 
