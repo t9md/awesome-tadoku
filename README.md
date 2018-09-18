@@ -48,7 +48,7 @@
 
 - [多読王国 シリーズ紹介](https://tadoking.com/series/)
 - [ＳＳＳ推薦・多読用基本洋書のご紹介](https://www.seg.co.jp/sss/review/osusume.html)
-- [外国語検定奮闘記 多読の本棚](http://www.kiriusa.com/living/examination/index.html#tadoku)
+- [外国語検定奮闘記 多読の本棚](http://www.kiriusa.com/living/examination/index.html#tadoku) 紹介の仕方がすばらしく、読みたくさせる。
 - [多聴多読ステーション YL別検索](https://www.kikuyomu.com/ylsearch.php)
 
 # 図書館・多読ブッククラブ
