@@ -52,8 +52,8 @@
 
 # 図書館・多読ブッククラブ
 
-- 四谷図書館: 新宿区・四谷の図書館、多読の本多数
-- SEG社会人ブッククラブ(http://www.seg.co.jp/bookclub/)
+- [四谷図書館](https://www.library.shinjuku.tokyo.jp/facility/yotsuya.html): 新宿区・四谷の図書館、多読の本多数. [ここで検索できる](https://www.library.shinjuku.tokyo.jp/WebOpac/webopac/selectsearch.do?searchkbn=0&histnum=1)
+- [SEG社会人ブッククラブ](http://www.seg.co.jp/bookclub/)
 - [NPO多言語多読の講座](https://tadoku.org/english/tadoku-courses/)を受講すると、ライブラリにある本も借りられる。北新宿にある
 - [多読用図書が読める図書館リスト](http://www.cosmopier.com/library/): これが全てではない or 情報が最新ではない、という印象
 
