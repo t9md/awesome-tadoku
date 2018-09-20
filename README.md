@@ -10,7 +10,7 @@
   - [Scribd](#scribd)
   - [Netflix](#netflix)
   - [Mouse Dictionary](#mouse-dictionary)
-  - [リスニング素材](#リスニング素材)
+- [リスニング素材](#リスニング素材)
 - [CHANGELOG](#changelog)
 
 <!-- TOC END -->
