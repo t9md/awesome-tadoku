@@ -14,6 +14,9 @@
   - [リスニング](#リスニング)
   - [ライティング](#ライティング)
   - [発音](#発音)
+    - [tophonetics: 文章を貼り付けると IPA 発音記号化してくれる。](#tophonetics-文章を貼り付けると-ipa-発音記号化してくれる)
+    - [iPhone/macOS のスピーチ機能](#iphonemacos-のスピーチ機能)
+    - [洋楽を歌う](#洋楽を歌う)
 - [CHANGELOG](#changelog)
 
 <!-- TOC END -->
@@ -117,25 +120,40 @@ Tools
 
 ## 発音
 
-- [tophonetics](https://tophonetics.com/): 文章を貼り付けると IPA 発音記号化してくれる。
-  - IPA 化された発音記号を読むことはもちろん役立つ。が、その他にも面白い機能がある。日本語のメニューでは変換時に"カタカナ表示"が選べる。これを馬鹿にしてはいけない。日本人発音の良くある間違いは、アルファベットを見て、フォニックス(Phonics)読みではなく、ローマ字読みしてしまう所だ。"カタカナ表示"の出力はローマ字読みのカタカナでは無いので、声に出して読んでみるとローマ字読みの悪い癖に気づかせられる。僕は"ローマ字読みの悪い癖をほぐす"目的で補助的に使っている。
-  ![toPhonetics-katakana](imgs/toPhonetics.png)
-- iPhone/macOS のスピーチ機能: アクセシビリティ → スピーチから有効にすれば、テキストの読み上げ(スクリーン or 選択範囲)が可能
-  - iPhone はスピーチに Siri の声が選べる。macOS では選べない。個人的には iPhone の Siri の読み上げが最も自然に感じる。
-- 洋楽を歌う
-  - 歌詞の発音を tophonetics に貼り付けて発音確認し、word, sentence 毎に仕上げつつ、Youtube で歌詞付きの歌を見つけて何度も練習する
-  - 歌えるまでのSteps: 僕は一応このステップを意識しつつ、1-4を薄く重ね塗りの要領で繰り返し、完成度を徐々に上げる作戦でやっている。僕はこれで rap を練習している。
-    - 1: Wordを仕上げる、Sentence を仕上げる。
-    - 2: 朗読する、できる
-    - 3: 速度を落として再生してついていける
-    - 4: 標準速度でついていける
-  - Youtube
-    - 速度を変えて再生できる(標準機能)
-    - [Youtube Looper](https://chrome.google.com/webstore/detail/youtube-looper/bidjeabmcpopfddfcnpniceojmkklcje) を Chrome に入れれば指定した部分のみループ出来るようになる。
-  ![youtube looper](imgs/youtube-looper.png)
-  - Amazon Music Player
-    - Amazon プライムに加入していれば聴けるプライムミュージックのプレイヤーは歌詞が表示でき、歌っている箇所がハイライトされるし、歌詞クリックで該当箇所に飛べるので部分練習に便利。再生速度の変更は出来ないのと、全ての歌が歌詞サポートしている訳ではない。
-  ![amazon-music](imgs/amazon-music.png)
+### [tophonetics](https://tophonetics.com/): 文章を貼り付けると IPA 発音記号化してくれる。
+
+IPA 化された発音記号を読むことはもちろん役立つ。が、その他にも面白い機能がある。日本語のメニューでは変換時に"カタカナ表示"が選べる。これを馬鹿にしてはいけない。日本人発音の良くある間違いは、アルファベットを見て、フォニックス(Phonics)読みではなく、ローマ字読みしてしまう所だ。"カタカナ表示"の出力はローマ字読みのカタカナでは無いので、声に出して読んでみるとローマ字読みの悪い癖に気づかせられる。僕は"ローマ字読みの悪い癖をほぐす"目的で補助的に使っている。
+
+![toPhonetics-katakana](imgs/toPhonetics.png)
+
+### iPhone/macOS のスピーチ機能
+
+アクセシビリティ → スピーチから有効にすれば、テキストの読み上げ(スクリーン or 選択範囲)が可能
+iPhone はスピーチに Siri の声が選べる。macOS では選べない。個人的には iPhone の Siri の読み上げが最も自然に感じる。
+
+### 洋楽を歌う
+
+#### 練習のステップ
+
+- 歌詞の発音を tophonetics に貼り付けて発音確認し、word, sentence 毎に仕上げつつ、Youtube で歌詞付きの歌を見つけて何度も練習する。
+- 歌えるまでのSteps: 僕は一応このステップを意識しつつ、1-4を薄く重ね塗りの要領で繰り返し、完成度を徐々に上げる作戦でやっている。僕はこれで rap を練習している。
+
+1. Wordを仕上げる、Sentence を仕上げる。
+2. 朗読する、できる
+3. 速度を落として再生してついていける
+4. 標準速度でついていける
+
+#### Youtube
+
+- 速度を変えて再生できる(標準機能)
+- [Youtube Looper](https://chrome.google.com/webstore/detail/youtube-looper/bidjeabmcpopfddfcnpniceojmkklcje) を Chrome に入れれば指定した部分のみループ出来るようになる。
+![youtube looper](imgs/youtube-looper.png)
+
+#### Amazon Music Player
+
+Amazon プライムに加入していれば聴けるプライムミュージックのプレイヤーは歌詞が表示でき、歌っている箇所がハイライトされるし、歌詞クリックで該当箇所に飛べるので部分練習に便利。再生速度の変更は出来ないのと、全ての歌が歌詞サポートしている訳ではない。
+
+![amazon-music](imgs/amazon-music.png)
 
 
 # CHANGELOG
