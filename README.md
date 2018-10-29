@@ -76,14 +76,13 @@
 
 - 年契約すると20%のオファーもらえるので月額750円位だった(111円/$の時で)。
 - 2018年2月から、月額固定で(ほぼ)読み放題のサービスが始まったようだ。
-- 何が良いかというと本だけではなく、Audiobookも聴ける点。相当英語力がつかないとAudiobookのみで内容をちゃんと理解するのは難しい。AmazonでAudibleを買ってもレベルが合わず、買っただけ。という状態にもなりがちだ。ScribdならAudibleをいくら聴いてもお金はかからないので、気楽に色々試し聞きできる。
-- 多読の中級者におすすめの "Who is(was)" シリーズも沢山ある
+- 何が良いかというと本だけではなく、Audiobookも聴ける点。相当英語力がつかないとAudiobookのみで内容をちゃんと理解するのは難しい。AmazonでAudibleを買ってもレベルが合わず、買っただけ。という状態にもなりがちだ。ScribdならAudiobookをいくら聴いてもお金はかからないので、気楽に色々試し聞きできる。
+- 多読の中級者におすすめの "Who is(was)" シリーズも沢山ある。
 ![who-was](imgs/whowas.png)
 
 ## [Netflix](https://www.netflix.com/)
 
-- 動画サービス。月額制。Amazon Prime と違い字幕版と吹替版で動画が分かれていない。一つの動画で字幕や音声言語を選べる。
-- なので字幕を消すことも出来る.日本語音声・英語字幕もできる。英語字幕があるのがリスニングを鍛える時に使える。
+- 動画サービス。月額制。Amazon Video と違い字幕版と吹替版で動画が分かれていない。一つの動画で字幕や音声言語を選べる。Amazon Videoでは出来ない字幕を消すことや、日本語音声・英語字幕もできる。英語字幕があるのがリスニングを鍛える時に使える。
 - Chrome 拡張で、英語・日本語のダブル字幕同時表示ができるようにすることも出来る
   - 無料: [NflxMultiSubs](https://chrome.google.com/webstore/detail/nflxmultisubs-netflix-mul/pjhnilfooknlkdonmjnleaomamfehkli)
   - 有料: [Netflix 同時字幕で英語学習](https://chrome.google.com/webstore/detail/netflix-%E5%90%8C%E6%99%82%E5%AD%97%E5%B9%95%E3%81%A7%E8%8B%B1%E8%AA%9E%E5%AD%A6%E7%BF%92/gibmkmmdicoffkhjkfimmjkojjopoagg)
