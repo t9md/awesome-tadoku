@@ -10,7 +10,10 @@
   - [Scribd](#scribd)
   - [Netflix](#netflix)
   - [Mouse Dictionary](#mouse-dictionary)
-- [リスニング素材](#リスニング素材)
+- [その他](#その他-1)
+  - [リスニング素材](#リスニング素材)
+  - [ライティング Tools](#ライティング-tools)
+  - [発音 Tools](#発音-tools)
 - [CHANGELOG](#changelog)
 
 <!-- TOC END -->
@@ -75,7 +78,7 @@
 - 2018年2月から、月額固定で(ほぼ)読み放題のサービスが始まったようだ。
 - 何が良いかというと本だけではなく、Audiobookも聴ける点。相当英語力がつかないとAudiobookのみで内容をちゃんと理解するのは難しい。AmazonでAudibleを買ってもレベルが合わず、買っただけ。という状態にもなりがちだ。ScribdならAudibleをいくら聴いてもお金はかからないので、気楽に色々試し聞きできる。
 - 多読の中級者におすすめの "Who is(was)" シリーズも沢山ある
-![](imgs/whowas.png)
+![who-was](imgs/whowas.png)
 
 ## [Netflix](https://www.netflix.com/)
 
@@ -93,18 +96,38 @@
 - 格安な Scribd での多読に更に強力な味方(パソコンで読む人なら)になるでしょう！
 - ローカルに辞書データ持つので高速。英辞郎インポート可能
 - [作者による記事](https://qiita.com/wtetsu/items/c43232c6c44918e977c9)を見ると色々分かります。
-![](imgs/mouseover-dict.gif)
+![mouseover-dict](imgs/mouseover-dict.gif)
 
 
-# リスニング素材
+# その他
+
+## リスニング素材
 
 - [culips.com](https://www.culips.com/)
 - [Randall's ESL Cyber Listening Lab](https://www.esl-lab.com/index.htm)
 - [Videos in Levels](http://www.videosinlevels.com/)
 - [elllo](http://www.elllo.org/)
 
+## ライティング Tools
+
+- [Grammarly](https://www.grammarly.com/) 文法チェックツール、スタンドアロンアプリ、Web版、Chrome プラグインがある。単純な文法エラーに加え、前置詞の誤りや、類語への置き換えも補助してくれる
+- [ludwig](https://ludwig.guru/) 用語の使用例を NYT, Wikipedia, Forbs 等から検索できる
+- [Google 翻訳] https://translate.google.co.jp/
+
+## 発音 Tools
+
+- [tophonetics](https://tophonetics.com/): 文章を貼り付けると IPA 発音記号化。
+- iPhone/macOS のスピーチ機能: アクセシビリティ → スピーチから有効にすれば、テキストの読み上げ(スクリーン or 選択範囲)が可能
+  - iPhone はスピーチに Siri の声が選べる。macOS では選べない。僕は iPhone の Siri の読み上げが最も自然に感じる。
+- 洋楽を歌う
+  - 歌詞の発音を tophonetics に貼り付けて発音確認し、word, sentence 毎に仕上げつつ、Youtube で歌詞付きの歌を見つけて何度も練習する
+  - Youtube は速度を落として再生が出来る(標準機能)、[Youtube Looper](https://chrome.google.com/webstore/detail/youtube-looper/bidjeabmcpopfddfcnpniceojmkklcje) を Chrome に入れれば指定した部分のみループ出来るようになる。最初は、速度を落として、サビ部分をループさせ、サビを完成させればやる気が出るかも。僕はこのやり方で rap を歌えるように練習している。
+  ![youtube looper](imgs/youtube-looper.png)
+  - Amazon Music Player
+  ![amazon-music](imgs/amazon-music.jpg)
 
 # CHANGELOG
 
+- 2018-10-29: ライティング、発音ツールを追加
 - 2018-09-18: リスニング素材・本を選ぶ時に参考になるサイト・Brighture Blog への記事リンクを追加
 - 2018-09-07: 初期リリース
