@@ -125,10 +125,10 @@ Tools
 - 洋楽を歌う
   - 歌詞の発音を tophonetics に貼り付けて発音確認し、word, sentence 毎に仕上げつつ、Youtube で歌詞付きの歌を見つけて何度も練習する
   - 歌えるまでのSteps: 僕は一応このステップを意識しつつ、1-4を薄く重ね塗りの要領で繰り返し、完成度を徐々に上げる作戦でやっている。僕はこれで rap を練習している。
-    1. Wordを仕上げる、Sentence を仕上げる。
-    2. 朗読する、できる
-    3. 速度を落として再生してついていける
-    4. 標準速度でついていける
+    - 1. Wordを仕上げる、Sentence を仕上げる。
+    - 2. 朗読する、できる
+    - 3. 速度を落として再生してついていける
+    - 4. 標準速度でついていける
   - Youtube
     - 速度を変えて再生できる(標準機能)
     - [Youtube Looper](https://chrome.google.com/webstore/detail/youtube-looper/bidjeabmcpopfddfcnpniceojmkklcje) を Chrome に入れれば指定した部分のみループ出来るようになる。
