@@ -134,7 +134,7 @@ Tools
   ![youtube looper](imgs/youtube-looper.png)
   - Amazon Music Player
     - Amazon プライムに加入していれば聴けるプライムミュージックのプレイヤーは歌詞が表示でき、歌っている箇所がハイライトされるし、歌詞クリックで該当箇所に飛べるので部分練習に便利。再生速度の変更は出来ないのと、全ての歌が歌詞サポートしている訳ではない。
-  ![amazon-music](imgs/amazon-music.jpg)
+  ![amazon-music](imgs/amazon-music.png)
 
 
 # CHANGELOG
