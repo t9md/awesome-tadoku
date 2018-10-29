@@ -11,9 +11,9 @@
   - [Netflix](#netflix)
   - [Mouse Dictionary](#mouse-dictionary)
 - [その他](#その他-1)
-  - [リスニング素材](#リスニング素材)
-  - [ライティング Tools](#ライティング-tools)
-  - [発音 Tools](#発音-tools)
+  - [リスニング](#リスニング)
+  - [ライティング](#ライティング)
+  - [発音](#発音)
 - [CHANGELOG](#changelog)
 
 <!-- TOC END -->
@@ -101,27 +101,29 @@
 
 # その他
 
-## リスニング素材
+## リスニング
 
+素材
 - [culips.com](https://www.culips.com/)
 - [Randall's ESL Cyber Listening Lab](https://www.esl-lab.com/index.htm)
 - [Videos in Levels](http://www.videosinlevels.com/)
 - [elllo](http://www.elllo.org/)
 
-## ライティング Tools
+## ライティング
 
+Tools
 - [Grammarly](https://www.grammarly.com/) 文法チェックツール、スタンドアロンアプリ、Web版、Chrome プラグインがある。単純な文法エラーに加え、前置詞の誤りや、類語への置き換えも補助してくれる
-- [ludwig](https://ludwig.guru/) 用語の使用例を NYT, Wikipedia, Forbs 等から検索できる
-- [Google 翻訳] https://translate.google.co.jp/
+- [ludwig](https://ludwig.guru/) 用語の使用例を NYT, Wikipedia, Forbes 等から検索できる
+- [Google 翻訳](https://translate.google.co.jp/): 英文を書いて日本語として意味あるものになるか的なチェックが便利
 
-## 発音 Tools
+## 発音
 
 - [tophonetics](https://tophonetics.com/): 文章を貼り付けると IPA 発音記号化。
 - iPhone/macOS のスピーチ機能: アクセシビリティ → スピーチから有効にすれば、テキストの読み上げ(スクリーン or 選択範囲)が可能
   - iPhone はスピーチに Siri の声が選べる。macOS では選べない。僕は iPhone の Siri の読み上げが最も自然に感じる。
 - 洋楽を歌う
   - 歌詞の発音を tophonetics に貼り付けて発音確認し、word, sentence 毎に仕上げつつ、Youtube で歌詞付きの歌を見つけて何度も練習する
-  - Steps (僕自身もこの通りのステップでやっている訳ではなく、薄く重ね塗りの容量で完成度を上げていっている)、僕はこのやり方で rap を歌えるように練習している。
+  - 歌えるまでのSteps: 僕は一応このステップを意識しつつ、1-4を薄く重ね塗りの要領で繰り返し、完成度を徐々に上げる作戦でやっている。僕はこれで rap を練習している。
     1. Wordを仕上げる、Sentence を仕上げる。
     2. 朗読する、できる
     3. 速度を落として再生してついていける
