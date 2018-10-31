@@ -147,7 +147,12 @@ iPhone はスピーチに Siri の声が選べる。macOS では選べない。�
 
 #### Youtube
 
-- 速度を変えて再生できる(標準機能)
+- 練習時に使える機能とショートカット
+  - `<`, `>`: 再生速度変更(`0.5`, `0.75`, `Normal`, `1.25` をキーボードで切り替える)
+  - `0`...`9`: 相対的な再生位置の指定。`0` だと最初. `9`だと最後。
+  - `f`: フルスクリーン
+  - `c`: キャプション表示(歌詞がキャプションとして登録されているものは結構ある)
+  - `+`, `-`: キャプションサイズの変更
 - [Youtube Looper](https://chrome.google.com/webstore/detail/youtube-looper/bidjeabmcpopfddfcnpniceojmkklcje) を Chrome に入れれば指定した部分のみループ出来るようになる。
 ![youtube looper](imgs/youtube-looper.png)
 
