@@ -14,9 +14,11 @@
   - [リスニング](#リスニング)
   - [ライティング](#ライティング)
   - [発音](#発音)
+    - [ELSA Speak](#elsa-speak)
     - [tophonetics](#tophonetics)
     - [iPhone/macOS のスピーチ機能](#iphonemacos-のスピーチ機能)
     - [洋楽を歌う](#洋楽を歌う)
+- [英会話, fluency](#英会話-fluency)
 - [CHANGELOG](#changelog)
 
 <!-- TOC END -->
@@ -120,6 +122,12 @@ Tools
 
 ## 発音
 
+### [ELSA Speak](https://elsajapan.com/)
+
+アメリカ英語発音限定だが、発音をマイクに録音し、クラウドに送ることで不明瞭な発音を指摘してくれる。  
+発音を独学をしている場合でもこういうソフトである程度客観的なフィードバックを受けながら行うほうが安心だし、モチベーションも得られる。  
+すごい時代になった。超オススメ。  
+
 ### [tophonetics](https://tophonetics.com/)
 
 文章を貼り付けると IPA 発音記号化してくれる。  
@@ -162,9 +170,31 @@ Amazon プライムに加入していれば聴けるプライムミュージッ�
 
 ![amazon-music](imgs/amazon-music.png)
 
+# 英会話, fluency
+
+- 会話は総合力
+  - ボキャブラリ
+  - 作文能力
+  - 声の大きさ、良さ
+  - 発音のわかり易さ
+    - 子音の明確さ、母音の響き
+    - イントネーションと自然さ(effortlessness, リエゾン, リダクション etc)
+  - 背景知識
+  - 身振り手振り、表情
+
+語学学習は終わりがないマラソンだ。情報もいっぱいあって溺れそうになる。そんな時僕は以下の記事を羅針盤にしている。  
+どちらも嘘がなく、泥臭いプロセスをさらけ出していてやる気が感染する感じ。素晴らしい！  
+
+- [Bob](https://twitter.com/Bobinglish) さん
+  - [僕はこうやって英語が話せるようになった](http://sky-rocket-english.com/my-english-learning-story/)
+  - [僕の英語発音はEllegardenというバンドの出会いから](https://note.mu/bobengdom/n/na860d42ccf19)
+- [新井リオ](https://twitter.com/_arairio) さん
+  - [独学3年間の努力と道のり。日本で英語が話せるようになった僕の勉強法](http://arairio.com/english/how-to-study)
+  - [僕が英語の「独学」にこだわる理由。欧米への語学留学が全てではない。](http://arairio.com/english/18_06_22)
 
 # CHANGELOG
 
+- 2018-11-07: 英会話のコーナー + Bobさん、新井リオさんの記事へのリンクを追加、発音: ELSA Speak の紹介
 - 2018-10-29: ライティング、発音のセクションを追加
 - 2018-09-18: リスニング素材・本を選ぶ時に参考になるサイト・Brighture Blog への記事リンクを追加
 - 2018-09-07: 初期リリース
