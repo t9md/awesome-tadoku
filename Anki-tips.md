@@ -5,14 +5,14 @@
   - [Action:Card](#actioncard)
     - [Style](#style)
     - [Front or Back](#front-or-back)
-- [TIPS: 音声を登録せずに iPhone に読み上げさせる。](#tips-音声を登録せずに-iphone-に読み上げさせる)
+- [TIPS: 音声を登録せずに iPhone に読み上げさせる](#tips-音声を登録せずに-iphone-に読み上げさせる)
   - [Motivation](#motivation-1)
   - [Action:Card](#actioncard-1)
     - [Front](#front)
-- [TIPS: TAP をカスタマイズしてより Lazy に操作しよう。](#tips-tap-をカスタマイズしてより-lazy-に操作しよう)
+- [TIPS: TAP をカスタマイズしてより Lazy に操作したい](#tips-tap-をカスタマイズしてより-lazy-に操作したい)
   - [Motivation](#motivation-2)
   - [Action:設定変更](#action設定変更)
-- [TIPS:必須では無いフィールドにスタイルを設定した時のゴミを消したい。](#tips必須では無いフィールドにスタイルを設定した時のゴミを消したい)
+- [TIPS:必須では無いフィールドにスタイルを設定した時のゴミを消したい](#tips必須では無いフィールドにスタイルを設定した時のゴミを消したい)
   - [Motivation](#motivation-3)
   - [Action:Card](#actioncard-2)
     - [Style](#style-1)
@@ -80,7 +80,7 @@
 </div>
 ```
 
-# TIPS: 音声を登録せずに iPhone に読み上げさせる。
+# TIPS: 音声を登録せずに iPhone に読み上げさせる
 
 ## Motivation
 
@@ -114,7 +114,7 @@ Anki のカードは実際には Web ページなので、Web Speech API とい�
 </script>
 ```
 
-# TIPS: TAP をカスタマイズしてより Lazy に操作しよう。
+# TIPS: TAP をカスタマイズしてより Lazy に操作したい
 
 ## Motivation
 
@@ -170,7 +170,7 @@ iPhone を右手で持ち、片手で操作した場合、`Mid Left` と `Mid Ce
 | Bottom Center      | Answer Good  |
 | Bottom Right       | Answer Easy  |
 
-# TIPS:必須では無いフィールドにスタイルを設定した時のゴミを消したい。
+# TIPS:必須では無いフィールドにスタイルを設定した時のゴミを消したい
 
 ## Motivation
 
