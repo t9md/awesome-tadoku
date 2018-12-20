@@ -124,16 +124,16 @@ AnkiMobile の Taps をカスタマイズすることでよりルーズに操作
 <img src="./imgs/anki/customize-tap-4choices.jpeg" width="200">
 </p>
 
-[注意] 右利き。指の短い俺用の手を前提に考えて設定しています。  
 選択肢3つの場合は直感的に対応している。ただ一つの例外は左下(`Bottom Left`) が 選択肢に現れていない`Answer Hard`になっていること。
 iPhone を右手で持ち、片手で操作した場合、`Mid Left` と `Mid Center` が最も押しやすく、ここを基本に直感性、使用頻度を考慮してアクションを対応させていく。
 
+- [俺の手の前提条件]: iPhone を主に右手で操作する。指は比較的短い。
 - `Answer Again` と `Answer Good` は位置関係からも直感的に理解しやすく押しやすいエリアにする。
 - `Answer Easy` と `Answer Hard` は"意識しないとタップできない"エリアに割り当てた。
-- 僕は iPhone を右手で操作することが多い。
 - `Bottom Left`は親指が届き難く、意識しないとTap出来ない(普通にTapすると `Mid Left` に届く)。
 - `Answer Hard` をどこかに割り当てたかったので、わざわざ意識しないと押せない `Bottom Left` に対応させた。
-- 俺はオーディオ再生の大きなボタンが嫌で、`Audio Buttons` を非表示に設定しているので単語が表示される `Top Center`のいちをタップすると `Replay Audio` するようにする。
+- オーディオ再生の大きなボタンが嫌で、`Audio Buttons` を非表示に設定しているので、`Audio Replay`が出来ない。
+- そこでほとんどのカードで単語が表示される `Top Center`の位置をタップすると `Replay Audio` する様にする。
 
 ### やることは設定変更
 
