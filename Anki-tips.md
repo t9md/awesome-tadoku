@@ -118,11 +118,13 @@ iPhone での操作の不満を改善したい。
 かといって、ボタンサイズを大きくすれば説明の表示エリアが狭くなってしまう。  
 AnkiMobile の Taps をカスタマイズすることでよりルーズに操作できる様にしたい。  
 
-<spam><img src="./imgs/anki/customize-tap-frustrate.jpeg" width="200"></spam>
-<spam><img src="./imgs/anki/customize-tap-3choices.jpeg" width="200"></spam>
-<spam><img src="./imgs/anki/customize-tap-4choices.jpeg" width="200"></spam>
+<p>
+<img src="./imgs/anki/customize-tap-frustrate.jpeg" width="200">
+<img src="./imgs/anki/customize-tap-3choices.jpeg" width="200">
+<img src="./imgs/anki/customize-tap-4choices.jpeg" width="200">
+</p>
 
-ちなみに、右利き。指の長さは短い俺用です。  
+[注意] 右利き。指の短い俺用の手を前提に考えて設定しています。  
 選択肢3つの場合は直感的に対応している。ただ一つの例外は左下(`Bottom Left`) が 選択肢に現れていない`Answer Hard`になっていること。
 iPhone を右手で持ち、片手で操作した場合、`Mid Left` と `Mid Center` が最も押しやすく、ここを基本に直感性、使用頻度を考慮してアクションを対応させていく。
 
