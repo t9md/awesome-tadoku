@@ -1,30 +1,35 @@
 <!-- TOC START min:1 max:3 link:true update:true -->
 - [この文書について](#この文書について)
-  - [TIPS: 便利な辞書リスト](#tips-便利な辞書リスト)
-    - [Motivation](#motivation)
-    - [Card](#card)
-  - [TIPS: 音声を登録せずに iPhone に読み上げさせる。](#tips-音声を登録せずに-iphone-に読み上げさせる)
-    - [Motivation](#motivation-1)
-    - [Card](#card-1)
-  - [TIPS: TAP をカスタマイズしてより Lazy に操作しよう。](#tips-tap-をカスタマイズしてより-lazy-に操作しよう)
-    - [Motivation](#motivation-2)
-    - [やることは設定変更](#やることは設定変更)
-  - [TIPS:必須では無いフィールドにスタイルを設定した時のゴミを消したい。](#tips必須では無いフィールドにスタイルを設定した時のゴミを消したい)
-    - [Motivation](#motivation-3)
-    - [Card](#card-2)
+- [TIPS: 便利な辞書リスト](#tips-便利な辞書リスト)
+  - [Motivation](#motivation)
+  - [Action:Card](#actioncard)
+    - [Style](#style)
+    - [Front or Back](#front-or-back)
+- [TIPS: 音声を登録せずに iPhone に読み上げさせる。](#tips-音声を登録せずに-iphone-に読み上げさせる)
+  - [Motivation](#motivation-1)
+  - [Action:Card](#actioncard-1)
+    - [Front](#front)
+- [TIPS: TAP をカスタマイズしてより Lazy に操作しよう。](#tips-tap-をカスタマイズしてより-lazy-に操作しよう)
+  - [Motivation](#motivation-2)
+  - [Action:設定変更](#action設定変更)
+- [TIPS:必須では無いフィールドにスタイルを設定した時のゴミを消したい。](#tips必須では無いフィールドにスタイルを設定した時のゴミを消したい)
+  - [Motivation](#motivation-3)
+  - [Action:Card](#actioncard-2)
+    - [Style](#style-1)
+    - [Front](#front-1)
 
 <!-- TOC END -->
 
 # この文書について
 
-[Anki](https://apps.ankiweb.net/index.html) について、技術的なTIPSをこの文書に書いていきます。  
-[Ankiを始める/紹介する時に必要な情報を集めたページ](https://ei-raku.com/2018/06/learning-anki/) は必読、前提知識とする。  
+- [Anki](https://apps.ankiweb.net/index.html) について、技術的なTIPSをこの文書に書いていきます。  
+- [Ankiを始める/紹介する時に必要な情報を集めたページ](https://ei-raku.com/2018/06/learning-anki/) は必読、前提知識とする。  
+- 記述のスタイル: TIPS毎に、モチベーション(`Motivation`)を説明し、アクション(`Action`)で解決策を示す。
+- 俺の環境: MacBookPro と iPhone(AnkiMobile) です。Windows は持っていません。  
 
-ちなみに、俺が使っている環境は MacBookPro と iPhone(AnkiMobile) です。Windows は持っていません。  
+# TIPS: 便利な辞書リスト
 
-## TIPS: 便利な辞書リスト
-
-### Motivation
+## Motivation
 
 完全に初見の単語を覚えるのは辛い。何かしら記憶に引っかかりが欲しい。  
 そこで有効なのが Google 画像検索や、英英辞典で別の観点での説明を見たりすることだ。  
@@ -33,13 +38,13 @@
 
 <img src="./imgs/anki/search-links.png" width="400">
 
-### Card
+## Action:Card
 
 `{{eng_word}}` は英単語のフィールド名。  
 ちなみに僕は省スペースの為に Ei-jiro や Weblio は削除してるし、他のリンクも文字をもっと短縮している。  
 各自好きなようにカスタマイズして使ってください。  
 
-#### Style
+### Style
 
 ```css
 .search {
@@ -58,7 +63,7 @@
 }
 ```
 
-#### Front or Back
+### Front or Back
 
 ```html
 <div id="search-group">
@@ -75,9 +80,9 @@
 </div>
 ```
 
-## TIPS: 音声を登録せずに iPhone に読み上げさせる。
+# TIPS: 音声を登録せずに iPhone に読み上げさせる。
 
-### Motivation
+## Motivation
 
 単語や文章の音声を用意するのは結構手間だ。  
 ネット経由で TTS(Text To Speech) サービスを利用するのも遅延や通信量が嫌だ。  
@@ -86,9 +91,9 @@ Anki のカードは実際には Web ページなので、Web Speech API とい�
 
 - 参考: [iPhone 版 Anki でテキストを読み上げるには](http://rs.luminousspice.com/speech-text-on-ankimobile/)
 
-### Card
+## Action:Card
 
-#### Front
+### Front
 
 ```html
 <div id="eng_word">{{eng_word}}</div>
@@ -109,9 +114,9 @@ Anki のカードは実際には Web ページなので、Web Speech API とい�
 </script>
 ```
 
-## TIPS: TAP をカスタマイズしてより Lazy に操作しよう。
+# TIPS: TAP をカスタマイズしてより Lazy に操作しよう。
 
-### Motivation
+## Motivation
 
 iPhone での操作の不満を改善したい。
 デッキをこなしていく時、下に表示されるボタンを正確に押すのが面倒。  
@@ -135,7 +140,7 @@ iPhone を右手で持ち、片手で操作した場合、`Mid Left` と `Mid Ce
 - オーディオ再生の大きなボタンが嫌で、`Audio Buttons` を非表示に設定しているので、`Audio Replay`が出来ない。
 - そこでほとんどのカードで単語が表示される `Top Center`の位置をタップすると `Replay Audio` する様にする。
 
-### やることは設定変更
+## Action:設定変更
 
 `Preferences > Review > Taps` を選択してTapの設定をカスタマイズする。  
 縦に３つ、横に３つでタップエリアを区別してあり、それぞれにアクションが設定できる。  
@@ -165,18 +170,18 @@ iPhone を右手で持ち、片手で操作した場合、`Mid Left` と `Mid Ce
 | Bottom Center      | Answer Good  |
 | Bottom Right       | Answer Easy  |
 
-## TIPS:必須では無いフィールドにスタイルを設定した時のゴミを消したい。
+# TIPS:必須では無いフィールドにスタイルを設定した時のゴミを消したい。
 
-### Motivation
+## Motivation
 
 必須ではないフィールドにスタイルを設定すると、文字が空の時にゴミが残ってダサくなってしまう。  
 フィールドが空ではない時は表示しないようにしたい。
 
 <img src="./imgs/anki/styling-optional-field.png" width="600">
 
-### Card
+## Action:Card
 
-#### Style
+### Style
 
 ```css
 .card {
@@ -210,7 +215,7 @@ iPhone を右手で持ち、片手で操作した場合、`Mid Left` と `Mid Ce
 }
 ```
 
-#### Front
+### Front
 
 `<script>`に指定したJavaScript で `extra` フィールド用の DOM Element(`<div id="extra"`>) を取得し、テキストが空だったら非表示 `element.style.display = 'none'` にしている。
 
