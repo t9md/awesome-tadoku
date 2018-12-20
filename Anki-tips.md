@@ -22,6 +22,9 @@
   - [Action:Card](#actioncard-3)
     - [Style](#style-2)
     - [Front](#front-2)
+- [TIPS: 覚えにくい単語を覚えやすくする為に画像を追加する](#tips-覚えにくい単語を覚えやすくする為に画像を追加する)
+  - [Motivation](#motivation-5)
+  - [Action:画像を設定しながら、その作業を通じて単語のイメージを育てる](#action画像を設定しながらその作業を通じて単語のイメージを育てる)
 
 <!-- TOC END -->
 
