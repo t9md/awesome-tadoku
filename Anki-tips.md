@@ -309,6 +309,8 @@ iPhone を右手で持ち、片手で操作した場合、`Mid Left` と `Mid Ce
 
 ## Action:画像を設定しながら、その作業を通じて単語のイメージを育てる
 
+**[注意] 画像やテキストには著作権がある場合があるので注意！**
+
 <img src="./imgs/anki/active-learn-for-difficult-vocablary.png" width="800">
 
 1. PCで アプリを開く。ウェブブラウザと、Ankiを開く。外部スクリーンがある場合はブラウザを独立ウインドウにしておくとよい
