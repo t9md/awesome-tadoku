@@ -78,6 +78,7 @@
   <div class="search"><a href="https://www.google.co.jp/search?q={{eng_word}}&tbm=isch">Image</a></div>
   <div class="search"><a href="https://www.pinterest.jp/search/pins/?q={{eng_word}}">Pinterest</a></div>
   <div class="search"><a href="https://en.oxforddictionaries.com/definition/{{eng_word}}">Oxford</a></div>
+  <div class="search"><a href="https://en.oxforddictionaries.com/thesaurus/{{eng_word}}">Oxford Thesaurus</a></div>
   <div class="search"><a href="https://thesaurus.plus/thesaurus/{{eng_word}}">Thesaurus+</a></div>
   <br>
   <div class="search"><a href="https://www.ldoceonline.com/dictionary/{{eng_word}}">Longman</a></div>
@@ -320,5 +321,5 @@ iPhone を右手で持ち、片手で操作した場合、`Mid Left` と `Mid Ce
   - 画像: Google Image が無理な時は Pinterest. 動詞や副詞は良い画像を探すのが難しい場合がある。進行形や受動態にしたり, 英英辞書で用例を調べてから目的語を含めて検索すると良い画像が見つかることもある。このような試行錯誤自体が学習になる(Active Learning)。
   - 類義語、対義語: 画像ではうまくいかない(動詞の場合、適切な画像が出てこない場合もある)
   - 日本語訳がわかりにくい時、英英辞典に: Oxford や Longman の説明は時におそろしく簡明確でスッキリ
-5. 気に入った画像をコピーし、image フィールドへ貼り付け
+5. 気に入った画像をコピーし、image フィールドへ貼り付け。
 6. Preview ウインドウで次の難しい単語を探す
