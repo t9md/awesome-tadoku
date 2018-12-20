@@ -1,6 +1,6 @@
 <!-- TOC START min:1 max:3 link:true update:true -->
 - [この文書について](#この文書について)
-- [TIPS: 便利な辞書リスト](#tips-便利な辞書リスト)
+- [TIPS: 便利なリンクのセット](#tips-便利なリンクのセット)
   - [Motivation](#motivation)
   - [Action:Card](#actioncard)
     - [Style](#style)
@@ -27,7 +27,7 @@
 - 記述のスタイル: TIPS毎に、モチベーション(`Motivation`)を説明し、アクション(`Action`)で解決策を示す。
 - 俺の環境: MacBookPro と iPhone(AnkiMobile) です。Windows は持っていません。  
 
-# TIPS: 便利な辞書リスト
+# TIPS: 便利なリンクのセット
 
 ## Motivation
 
