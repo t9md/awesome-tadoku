@@ -30,14 +30,14 @@
 そこで有効なのが Google 画像検索や、英英辞典で別の観点での説明を見たりすることだ。  
 これをより気楽にやれるようにするために、カードに辞書検索のリンク集を用意しておけば検索が効率的に行える。  
 [Ankiで英単語一覧を取り込む「詳細な」説明](https://ei-raku.com/2018/05/learning-anki-import/) に書いてあった辞書を土台に発展させたものが以下。  
-カスタマイズして使ってください。  
 
 <img src="./imgs/anki/search-links.png" width="400">
 
 ### Card
 
-`{{eng_word}}` は英単語のフィールド名。
-※ ちなみに僕は省スペースの為に Ei-jiro や Weblio は削除してるし、他のリンクも文字をもっと短縮している。
+`{{eng_word}}` は英単語のフィールド名。  
+ちなみに僕は省スペースの為に Ei-jiro や Weblio は削除してるし、他のリンクも文字をもっと短縮している。  
+各自好きなようにカスタマイズして使ってください。  
 
 #### Style
 
@@ -118,9 +118,10 @@ iPhone での操作の不満を改善したい。
 かといって、ボタンサイズを大きくすれば説明の表示エリアが狭くなってしまう。  
 AnkiMobile の Taps をカスタマイズすることでよりルーズに操作できる様にしたい。  
 
-<img src="./imgs/anki/customize-tap-frustrate.jpeg" width="200">
-<img src="./imgs/anki/customize-tap-3choices.jpeg" width="200">
-<img src="./imgs/anki/customize-tap-4choices.jpeg" width="200">
+
+<spam><img src="./imgs/anki/customize-tap-frustrate.jpeg" width="200"></spam>
+<spam><img src="./imgs/anki/customize-tap-3choices.jpeg" width="200"></spam>
+<spam><img src="./imgs/anki/customize-tap-4choices.jpeg" width="200"></spam>
 
 ちなみに、右利き。指の長さは短い俺用です。  
 選択肢3つの場合は直感的に対応している。ただ一つの例外は左下(`Bottom Left`) が 選択肢に現れていない`Answer Hard`になっていること。
