@@ -17,6 +17,11 @@
   - [Action:Card](#actioncard-2)
     - [Style](#style-1)
     - [Front](#front-1)
+- [TIPS:フィールドのテキスト内容によってスタイルを変えたい](#tipsフィールドのテキスト内容によってスタイルを変えたい)
+  - [Motivation](#motivation-4)
+  - [Action:Card](#actioncard-3)
+    - [Style](#style-2)
+    - [Front](#front-2)
 
 <!-- TOC END -->
 
@@ -99,8 +104,8 @@ Anki のカードは実際には Web ページなので、Web Speech API とい�
 <div id="eng_word">{{eng_word}}</div>
 
 <script>
-  var eng_word = document.getElementById("eng_word");
-  window.setTimeout("speak(eng_word.innerText)", 500);
+  var element = document.getElementById("eng_word");
+  window.setTimeout("speak(element.innerText)", 500);
   function speak(word) {
     var speech = new SpeechSynthesisUtterance();
     speech.text = word;
@@ -228,5 +233,60 @@ iPhone を右手で持ち、片手で操作した場合、`Mid Left` と `Mid Ce
 <script>
   var element = document.getElementById("extra");
   if (!element.innerText) element.style.display = 'none';
+</script>
+```
+
+# TIPS:フィールドのテキスト内容によってスタイルを変えたい
+
+## Motivation
+
+フィールドのテキストの値によって、スタイルを変えたい(色を変えたり、文字列を大きくしたり)。
+
+<img src="./imgs/anki/styling-by-field.png" width="600">
+
+例は単純だが、応用範囲は広い。  
+この例では単純にフィールドの文字列の一致を見て、同じフィールドのスタイルを変えているが、
+ - 別のフィールドのエレメントを取得してスタイルを設定することもできるし
+  - `getElementById('other_field').classList.add("foo")`
+ - 単純な文字列の完全一致ではなく、"含まれるか？"的なチェックも可能だし、
+  - `element.innerText.indexOf("注意")`
+ - [正規表現でのチェック](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String/match) もできる。  
+  - `element.innerText.match(/bar/)`
+
+## Action:Card
+
+### Style
+
+```css
+.card {
+  font-size: 20px;
+  text-align: center;
+  color: black;
+  background-color: white;
+}
+
+.kind-verb { color: red; }
+.kind-noun { color: blue; }
+.kind-other { color: black; }
+.word { font-size: 1.5em; }
+```
+
+### Front
+
+```html
+<div class="word">{{word}}</div>
+<div id="kind">{{kind}}</div>
+[sound:{{sound_file}}]
+
+<script>
+  var element = document.getElementById('kind')
+  var className
+  var kind = element.innerText
+
+  if (kind === '[動]') className = 'kind-verb'
+  else if (kind === '[名]') className = 'kind-noun'
+  else className = 'kind-other'
+
+  if (className) element.classList.add(className)
 </script>
 ```
