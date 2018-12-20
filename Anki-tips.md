@@ -17,9 +17,8 @@
 カスタマイズして使ってください。  
 
 Ankiで英単語一覧を取り込む「詳細な」説明
-![tst](./imgs/anki-search-links.png)
 
-<img src="./imgs/anki-search-links.png" width="200">
+<img src="./imgs/anki-search-links.png" width="400">
 
 - Style
 
