@@ -128,6 +128,10 @@ iPhone での操作の不満を改善したい。
 かといって、ボタンサイズを大きくすれば説明の表示エリアが狭くなってしまう。  
 AnkiMobile の Taps をカスタマイズすることでよりルーズに操作できる様にしたい。  
 
+[注意]
+- **ちなみにこのTIPSと"TIPS: 便利なリンクのセット"を組み合わせる場合、リンク集はなるべく上に配置する方が良い(画像ではそうなっていないが。。。)**
+- 理由は誤爆を防ぐため。`Answer Good` をしたくて `Mid Center` をタップしたつもりがリンクへジャンプしちゃうのを避けたい。
+
 <p>
 <img src="./imgs/anki/customize-tap-frustrate.jpeg" width="200">
 <img src="./imgs/anki/customize-tap-3choices.jpeg" width="200">
