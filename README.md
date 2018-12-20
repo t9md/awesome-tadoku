@@ -18,6 +18,7 @@
     - [tophonetics](#tophonetics)
     - [iPhone/macOS のスピーチ機能](#iphonemacos-のスピーチ機能)
     - [洋楽を歌う](#洋楽を歌う)
+    - [Articulation](#articulation)
 - [英会話, fluency](#英会話-fluency)
 - [CHANGELOG](#changelog)
 
@@ -169,6 +170,13 @@ iPhone はスピーチに Siri の声が選べる。macOS では選べない。�
 Amazon プライムに加入していれば聴けるプライムミュージックのプレイヤーは歌詞が表示でき、歌っている箇所がハイライトされるし、歌詞クリックで該当箇所に飛べるので部分練習に便利。再生速度の変更は出来ないのと、全ての歌が歌詞サポートしている訳ではない。
 
 ![amazon-music](imgs/amazon-music.png)
+
+### Articulation
+
+- [アメリカ英語の発音ノウハウ (2) ～ 舌のホームポジション](http://tomoto335.hatenablog.com/entry/american-english/02)
+- [首の根元を定位置として英語を発音・発声するとよい](https://www.youtube.com/watch?v=waAY-Qkavhs)
+- [英語を話すのに必要な、３つのポイント](https://englishbootcamp.jp/?p=1939)
+
 
 # 英会話, fluency
 
