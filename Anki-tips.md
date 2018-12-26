@@ -302,6 +302,8 @@ iPhone を右手で持ち、片手で操作した場合、`Mid Left` と `Mid Ce
 
 # TIPS: 覚えにくい単語を覚えやすくする為に画像を追加する
 
+この TIPS から [Accelerate Image Drag And Drop](https://ankiweb.net/shared/info/283563795) を作りました。よろしければ試してみてください。
+
 ## Motivation
 
 - 難し目のレベルの単語集デッキを始めた時、初見の単語が多すぎて暗記が困難。
