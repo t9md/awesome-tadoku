@@ -90,6 +90,19 @@
 </div>
 ```
 
+### [おまけ] macOS の内蔵辞書、iOS の別アプリの辞書を開く
+
+- `dict://{{keyword}}` 形式のリンクをクリックすると
+  - macOSでは内蔵辞書が開く。
+  - iPhone(iOS)では(対応アプリがあれば)別の辞書アプリが開く。僕の環境では Longman の英英辞書が開いた
+- iOS/macOS では アプリ毎に URL スキーマというのが決まっており、辞書アプリを指定して開くリンクを作ることも可能。下記の２つ目は"ウィズダム英和・和英辞典"へのリンクになっている。URLスキーマはアプリ開発元のサイトを調べて載っている場合もあるし、ない場合は頑張って調べるしか無い。ウィズダム英和辞典のリンクは、[ここ](https://hibikanblog.net/blog-entry-820.html) から調べた。
+
+```html
+<div id="search-group">
+  <div class="search"><a href="dict://{{eng_word}}/">MD</a></div>
+  <div class="search"><a href="mkwisdom://jp.monokakido.WISDOM/search?text={{eng_word}}/">WDM</a></div>
+</div>
+```
 # TIPS: 音声を登録せずに iPhone に読み上げさせる
 
 ## Motivation
