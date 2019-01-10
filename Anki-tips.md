@@ -105,6 +105,7 @@
   <div class="search"><a href="ldoce://{{eng_word}}">Longman 英英</a></div>
   <div class="search"><a href="mkwisdom://jp.monokakido.WISDOM/search?text={{eng_word}}">Wisdom 和英</a></div>
   <div class="search"><a href="com.sokoide.ieijiro://query?input={{eng_word}}">i英辞郎</a></div>
+  <div class="search"><a href="twitter://search?query={{eng_word}}">Twitter</a></div>
 </div>
 ```
 
