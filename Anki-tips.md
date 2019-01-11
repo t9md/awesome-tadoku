@@ -368,3 +368,169 @@ iPhone を右手で持ち、片手で操作した場合、`Mid Left` と `Mid Ce
 3. Ankiを再起動して、ブラウザを開き、デッキを選択。先頭のフィールドに色がついて、高さが変わっていたら成功。
 4. ひたすら広くなったフィールドに画像をドロップしていく。。。。。
 5. 終わったら。`_editor.css` をまるごと削除するなりして元に戻す。
+
+# TIPS: 実践的なカードStyleの例が欲しい
+
+抜粋ではなく、サンプルとして具体的に使っているカードとスタイルの例を見たい。
+そのサンプルを土台に変えていけるような材料として。
+
+## Motivation
+
+以下は t9md が SVL を覚えるのに使っているカード。
+Audio Play 用のボタンは表示していないので場所はテキトウ。
+
+<img src="./imgs/anki/practical-card-sample-Q.png" height="500">
+<img src="./imgs/anki/practical-card-sample-A.png" height="500">
+
+## Action:Card
+
+### Front
+
+```html
+<div class="front">
+  <div class="eng_word">{{eng_word}}</div>
+  <div class="sound">{{sound}}</div>
+  <div>{{sound_file}}</div>
+  <div class="svl">{{level}}</div>
+</div>
+```
+
+### Style
+
+```css
+.card {
+  margin: 0px;
+  font-size: 20px;
+  text-align: center;
+  color: #222222;
+  background-color: whitesmoke;
+}
+
+.front,
+.back {
+  margin: 10px;
+}
+
+hr {
+  border: 1px dotted #8c8b8b;
+  border-color: darkgray;
+}
+
+.eng_word {
+  font-size: 1.5em;
+}
+
+.sound {
+  color: royalblue;
+  padding: 0.3em;
+  font-size: 0.8em;
+}
+
+.explain {
+  text-align: left;
+}
+.usage,
+.memo,
+image-caption {
+  font-size: 0.8em;
+}
+
+.example {
+  background-color: #e8e8e8;
+  padding: 0.2em;
+  border-width: 0px;
+  border-radius: 0.2em;
+  border-style: solid;
+  border-color: tomato;
+  font-size: 0.8em;
+  text-align: left;
+}
+
+.jap_sen {
+  color: #444444;
+}
+
+.svl {
+  display: inline-block;
+  color: white;
+  width: 2em;
+  background-color: indianred;
+  padding: 0.2em;
+  border-width: 0px;
+  border-radius: 0.2em;
+  text-align: center;
+  font-size: 0.6em;
+
+  position: fixed;
+  top: 5px;
+  right: 10px;
+}
+
+#search-group {
+  /* border-style: solid; */
+  /* border-width: 1px; */
+  /* border-color: 1px; */
+  display: flex;
+}
+
+.search {
+  height: 20px;
+  line-height: 20px;
+  width: 100%;
+  font-size: 0.7em;
+  padding: 0.2em;
+  border-color: black;
+  border-width: 0px;
+}
+
+.search:nth-child(odd) {
+  background-color: dimgray;
+}
+.search:nth-child(even) {
+  background: lightgray;
+}
+
+.search a {
+  vertical-align: center;
+  text-decoration: none;
+}
+.search:nth-child(odd) a {
+  color: white !important;
+}
+.search:nth-child(even) a {
+  color: black !important;
+}
+```
+
+### Back
+
+```html
+{{FrontSide}}
+
+<div id="search-group">
+  <div class="search"><a href="dict://{{eng_word}}">Dict</a></div>
+  <div class="search"><a href="com.sokoide.ieijiro://query?input={{eng_word}}">i英辞郎</a></div>
+  <div class="search"><a href="mkwisdom://jp.monokakido.WISDOM/search?text={{eng_word}}">Wisdom</a></div>
+  <div class="search"><a href="twitter://search?query={{eng_word}}">Twitter</a></div>
+  <div class="search"><a href="https://thesaurus.plus/thesaurus/{{eng_word}}">Th+</a></div>
+  <div class="search"><a href="https://youglish.com/search/{{eng_word}}">YGsh</a></div>
+  <div class="search"><a id="primal-image-link" href="https://www.google.co.jp/search?q={{eng_word}}&tbm=isch">Img</a></div>
+</div>
+
+<div class="back">
+  <div class="explain">
+    <div class="jap_word">{{meaning}}<br></div>
+    <div class="usage">{{usage}}</div>
+    <div class="memo">{{memo}}</div>
+  </div>
+  <div class="example">
+    <spam class="eng_sen">{{eng_sen}}<br></spam>
+    <spam>{{eng_sen_sound_file}}</spam>
+    <spam class="jap_sen">{{jap_sen}}<br></spam>
+  </div>
+  <div class="representing-image">
+    <div style="font-size: 0.7em;">{{image_caption}}</div>
+    <div>{{image}}</div>
+  </div>
+</div>
+```
