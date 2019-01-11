@@ -379,8 +379,10 @@ iPhone を右手で持ち、片手で操作した場合、`Mid Left` と `Mid Ce
 以下は t9md が SVL を覚えるのに使っているカード。
 Audio Play 用のボタンは表示していないので場所はテキトウ。
 
+<p>
 <img src="./imgs/anki/practical-card-sample-Q.png" height="500">
 <img src="./imgs/anki/practical-card-sample-A.png" height="500">
+</p>
 
 ## Action:Card
 
