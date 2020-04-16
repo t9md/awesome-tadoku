@@ -1,32 +1,44 @@
-<!-- TOC START min:1 max:3 link:true update:true -->
-- [この文書について](#この文書について)
-- [TIPS: 便利なリンクのセット](#tips-便利なリンクのセット)
-  - [Motivation](#motivation)
-  - [Action:Card](#actioncard)
-    - [Style](#style)
-    - [Front or Back](#front-or-back)
-- [TIPS: 音声を登録せずに iPhone に読み上げさせる](#tips-音声を登録せずに-iphone-に読み上げさせる)
-  - [Motivation](#motivation-1)
-  - [Action:Card](#actioncard-1)
-    - [Front](#front)
-- [TIPS: TAP をカスタマイズしてより Lazy に操作したい](#tips-tap-をカスタマイズしてより-lazy-に操作したい)
-  - [Motivation](#motivation-2)
-  - [Action:設定変更](#action設定変更)
-- [TIPS:必須では無いフィールドにスタイルを設定した時のゴミを消したい](#tips必須では無いフィールドにスタイルを設定した時のゴミを消したい)
-  - [Motivation](#motivation-3)
-  - [Action:Card](#actioncard-2)
-    - [Style](#style-1)
-    - [Front](#front-1)
-- [TIPS:フィールドのテキスト内容によってスタイルを変えたい](#tipsフィールドのテキスト内容によってスタイルを変えたい)
-  - [Motivation](#motivation-4)
-  - [Action:Card](#actioncard-3)
-    - [Style](#style-2)
-    - [Front](#front-2)
-- [TIPS: 覚えにくい単語を覚えやすくする為に画像を追加する](#tips-覚えにくい単語を覚えやすくする為に画像を追加する)
-  - [Motivation](#motivation-5)
-  - [Action:画像を設定しながら、その作業を通じて単語のイメージを育てる](#action画像を設定しながらその作業を通じて単語のイメージを育てる)
-    - [image フィールドを広くするには？](#image-フィールドを広くするには)
-
+<!-- TOC START min:1 max:3 link:true asterisk:true update:true -->
+* [この文書について](#この文書について)
+* [TIPS: 便利なリンクのセット](#tips-便利なリンクのセット)
+  * [Motivation](#motivation)
+  * [Action:Card](#actioncard)
+    * [Style](#style)
+    * [Front or Back](#front-or-back)
+    * [[おまけ] macOS の内蔵辞書、iOS の別アプリの辞書を開く](#おまけ-macos-の内蔵辞書ios-の別アプリの辞書を開く)
+* [TIPS: 音声を登録せずに iPhone に読み上げさせる](#tips-音声を登録せずに-iphone-に読み上げさせる)
+  * [Motivation](#motivation-1)
+  * [Action:Card](#actioncard-1)
+    * [Front](#front)
+* [TIPS: TAP をカスタマイズしてより Lazy に操作したい](#tips-tap-をカスタマイズしてより-lazy-に操作したい)
+  * [Motivation](#motivation-2)
+  * [Action:設定変更](#action設定変更)
+* [TIPS:必須では無いフィールドにスタイルを設定した時のゴミを消したい](#tips必須では無いフィールドにスタイルを設定した時のゴミを消したい)
+  * [Motivation](#motivation-3)
+  * [Action:Card](#actioncard-2)
+    * [Style](#style-1)
+    * [Front](#front-1)
+* [TIPS:フィールドのテキスト内容によってスタイルを変えたい](#tipsフィールドのテキスト内容によってスタイルを変えたい)
+  * [Motivation](#motivation-4)
+  * [Action:Card](#actioncard-3)
+    * [Style](#style-2)
+    * [Front](#front-2)
+* [TIPS: 覚えにくい単語を覚えやすくする為に画像を追加する](#tips-覚えにくい単語を覚えやすくする為に画像を追加する)
+  * [Motivation](#motivation-5)
+  * [Action:画像を設定しながら、その作業を通じて単語のイメージを育てる](#action画像を設定しながらその作業を通じて単語のイメージを育てる)
+    * [image フィールドを広くするには？](#image-フィールドを広くするには)
+* [TIPS: 選択したテキストで検索する](#tips-選択したテキストで検索する)
+  * [Motivation](#motivation-6)
+  * [Action:Card](#actioncard-4)
+    * [Front](#front-3)
+    * [Style](#style-3)
+    * [Back](#back)
+* [TIPS: 実践的なカードStyleの例が欲しい](#tips-実践的なカードstyleの例が欲しい)
+  * [Motivation](#motivation-7)
+  * [Action:Card](#actioncard-5)
+    * [Front](#front-4)
+    * [Style](#style-4)
+    * [Back](#back-1)
 <!-- TOC END -->
 
 # この文書について
@@ -368,6 +380,153 @@ iPhone を右手で持ち、片手で操作した場合、`Mid Left` と `Mid Ce
 3. Ankiを再起動して、ブラウザを開き、デッキを選択。先頭のフィールドに色がついて、高さが変わっていたら成功。
 4. ひたすら広くなったフィールドに画像をドロップしていく。。。。。
 5. 終わったら。`_editor.css` をまるごと削除するなりして元に戻す。
+
+# TIPS: 選択したテキストで検索する
+
+## Motivation
+
+例文を読んでいて分からない単語が出てくる場合がある。
+
+この単語を画像検索や、辞書検索するには、単語を選択し、コピーし、辞書アプリやブラウザの検索ウィンドウ貼り付けて検索し、、、という手間が発生する。
+もっと気楽に検索できるようにしたい。iPhoneだと、単語の上で指をプレスすると、自動で単語を選択してくれる。選択したと同時に外部の辞書アプリや、Google画像検索で画像を検索できればいいのに！！
+
+例えば以下のようなSIL(ALCが出している句動詞、熟語の頻出リスト)を覚える場合、とりあえずは受動的に理解できれば良いので、例文を主軸にカードをつくるような場合を想定している。
+
+- 単語を選択した時点で、指定した検索エンジンで選択したテキストを検索する。
+- button に割り振った `id` と `queryById` テーブルのキーが対応している。
+- `__SEARCH__` は選択したテキストに置き換わって検索される。
+- `rememberCurrentSearch`を`false`にすれば、直近の検索エンジンを記憶しないようになる。
+
+<img src="./imgs/anki/search-on-select.png" height="500">
+
+## Action:Card
+
+### Front
+
+```html
+<div class="front">
+  <div id="search-kind" class="btn-group">
+    <button id="search-dic" class="current-search">Dic</button>
+    <button id="search-img">Img</button>
+  </div>
+  <br>
+  <br>
+  <div>
+  </div>
+  <!-- <div id='status'>N/A</div> -->
+  <spam class="sen-en">{{sen-en}}<br></spam>
+</div>
+
+<script>
+  var rememberCurrentSearch = true // maintain last search kind on next card.
+
+  var defaultSearch = 'search-dic'
+  var queryById = {
+    'search-dic': getSearchDicQuery(),
+    'search-img': "https://www.google.com/search?q=__SEARCH__&tbm=isch",
+  }
+
+  if (!rememberCurrentSearch || !getCurrentSearch()) {
+    setCurrentSearch(defaultSearch)
+  }
+  document.onmouseup = document.onkeyup = document.onselectionchange = handleSelection
+
+  function setCurrentSearch(text) {
+    document.body.setAttribute('data-current-search', text)
+  }
+  function getCurrentSearch() {
+    return document.body.getAttribute('data-current-search')
+  }
+  function getHref(text) {
+    return queryById[getCurrentSearch()].replace('__SEARCH__', text)
+  }
+  function handleSelection(event) {
+    var searchKind = document.getElementById('search-kind')
+    if (searchKind.contains(event.target)) {
+      setCurrentSearch(event.target.id)
+    }
+
+    var text = window.getSelection().toString()
+    if (text) {
+      var element = document.createElement('a')
+      element.setAttribute('href', getHref(text))
+      document.body.appendChild(element)
+      element.click()
+      element.remove()
+    }
+  }
+  function getSearchDicQuery() {
+    if (isIOS()) {
+      return 'mkwisdom://jp.monokakido.WISDOM/search?text=__SEARCH__'
+    } else {
+      return 'dict://__SEARCH__'
+    }
+  }
+  function isIOS() {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
+  }
+  function setStatus(text) {
+    document.getElementById('status').innerText = text
+  }
+</script>
+```
+
+### Style
+
+```css
+.card {
+  /* font-family: arial; */
+  font-size: 20px;
+  text-align: left;
+  color: #222222;
+  background-color: whitesmoke;
+}
+
+hr#answer {
+  border: 1px dotted #8c8b8b;
+  border-color: darkgray;
+}
+
+.sen-en { font-size: 1.2em; }
+.sen-ja { color: #444444; }
+
+.definition {
+  background-color: #e8e8e8;
+  padding: 0.1em;
+  border-width: 0px;
+  border-radius: 0.2em;
+  border-style: solid;
+  border-color: tomato;
+  text-align: left;
+}
+.sil-en { font-weight: bold; font-size: 0.9em; }
+.sil-ja { font-size: 0.7em; }
+
+.btn-group button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #063168;
+  color: white; /* White text */
+  /* border: none; */
+  /* padding: 10px 24px; /* Some padding */ */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+}
+```
+
+### Back
+
+```html
+<div class="back">
+  {{FrontSide}}
+  <hr id="answer">
+  <div class="definition">
+    <spam class="sil-en">{{sil-en}}</spam> &nbsp<spam>{{sil-ja}}<br></spam>
+  </div>
+  <div class="sen-ja"><br>{{sen-ja}}</div>
+</div>
+```
 
 # TIPS: 実践的なカードStyleの例が欲しい
 
