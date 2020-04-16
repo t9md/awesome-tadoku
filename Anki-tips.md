@@ -394,7 +394,8 @@ iPhone を右手で持ち、片手で操作した場合、`Mid Left` と `Mid Ce
 
 - 単語を選択した時点で、指定した検索エンジンで選択したテキストを検索する。
 - button に割り振った `id` と `queryById` テーブルのキーが対応している。
-- `__SEARCH__` は選択したテキストに置き換わって検索される。
+- 例えば `search-img` のボタンをクリックすると `"https://www.google.com/search?q=__SEARCH__&tbm=isch"`(`__SEARCH__` は選択したテキストに置き換わって検索される。) が検索される。
+- `search-dic` は `getSearchDicQuery()` を呼んで動的にクエリを決めているが、これは iOSでは Wisdom 辞書に、macOS上ではシステム辞書に対応させている。
 - `rememberCurrentSearch`を`false`にすれば、直近の検索エンジンを記憶しないようになる。
 
 <img src="./imgs/anki/search-on-select.png" height="500">
