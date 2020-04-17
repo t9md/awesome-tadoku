@@ -387,15 +387,16 @@ iPhone を右手で持ち、片手で操作した場合、`Mid Left` と `Mid Ce
 
 例文を読んでいて分からない単語が出てくる場合がある。
 
-この単語を画像検索や、辞書検索するには、単語を選択し、コピーし、辞書アプリやブラウザの検索ウィンドウ貼り付けて検索し、、、という手間が発生する。
+この単語を画像検索や、辞書検索するには、単語を選択し、コピーし、辞書アプリやブラウザの検索ウィンドウに貼り付けて検索し、、、という手間が発生する。
 もっと気楽に検索できるようにしたい。iPhoneだと、単語の上で指をプレスすると、自動で単語を選択してくれる。選択したと同時に外部の辞書アプリや、Google画像検索で画像を検索できればいいのに！！
 
 例えば以下のようなSIL(ALCが出している句動詞、熟語の頻出リスト)を覚える場合、とりあえずは受動的に理解できれば良いので、例文を主軸にカードをつくるような場合を想定している。
 
 - 単語を選択した時点で、指定した検索エンジンで選択したテキストを検索する。
-- button に割り振った `id` と `queryById` テーブルのキーが対応している。
-- 例えば `search-img` のボタンをクリックすると `"https://www.google.com/search?q=__SEARCH__&tbm=isch"`(`__SEARCH__` は選択したテキストに置き換わって検索される。) が検索される。
-- `search-dic` は `getSearchDicQuery()` を呼んで動的にクエリを決めているが、これは iOSでは Wisdom 辞書に、macOS上ではシステム辞書に対応させている。
+- button に割り振った `id` は `getSearchLink` へのキーになる。
+- 例えば `search-img` のボタンをクリックすると `https://www.google.com/search?q=___SEARCH___&tbm=isch`(`___SEARCH___` は選択したテキストに置き換わる) が検索される。
+- 独自の辞書を追加したければ、 `button` を追加、`getSearchLink`を変更の２ステップで可能。コメントアウトされた `ieijiro` のサンプルが参考になるはず。
+- `search-dic` はiOSでは Wisdom 辞書に、macOS上ではシステム辞書に対応させている。
 - `rememberCurrentSearch`を`false`にすれば、直近の検索エンジンを記憶しないようになる。
 
 <img src="./imgs/anki/search-on-select.png" height="500">
@@ -407,67 +408,71 @@ iPhone を右手で持ち、片手で操作した場合、`Mid Left` と `Mid Ce
 ```html
 <div class="front">
   <div id="search-kind" class="btn-group">
-    <button id="search-dic" class="current-search">Dic</button>
+    <button id="search-dic">Dic</button>
     <button id="search-img">Img</button>
+    <!-- <button id="search-eijiro">eijiro</button> -->
   </div>
   <br>
   <br>
-  <div>
-  </div>
   <!-- <div id='status'>N/A</div> -->
   <spam class="sen-en">{{sen-en}}<br></spam>
 </div>
 
 <script>
-  var rememberCurrentSearch = true // maintain last search kind on next card.
-
-  var defaultSearch = 'search-dic'
-  var queryById = {
-    'search-dic': getSearchDicQuery(),
-    'search-img': "https://www.google.com/search?q=__SEARCH__&tbm=isch",
-  }
+  var rememberCurrentSearch = true; // maintain last search kind on next card.
+  var attributeKey = "data-TIPS-current-search";
+  var defaultSearch = "search-dic";
 
   if (!rememberCurrentSearch || !getCurrentSearch()) {
-    setCurrentSearch(defaultSearch)
+    setCurrentSearch(defaultSearch);
   }
-  document.onmouseup = document.onkeyup = document.onselectionchange = handleSelection
+  document.onmouseup = document.onkeyup = document.onselectionchange = handleSelection;
 
   function setCurrentSearch(text) {
-    document.body.setAttribute('data-current-search', text)
+    document.body.setAttribute(attributeKey, text);
   }
   function getCurrentSearch() {
-    return document.body.getAttribute('data-current-search')
+    return document.body.getAttribute(attributeKey);
   }
-  function getHref(text) {
-    return queryById[getCurrentSearch()].replace('__SEARCH__', text)
+  function getSearchLink(key, text) {
+    var link = "";
+    switch (key) {
+      case "search-dic":
+        if (isIOS()) {
+          link = "mkwisdom://jp.monokakido.WISDOM/search?text=___SEARCH___";
+        } else {
+          link = "dict://___SEARCH___";
+        }
+        break;
+      case "search-img":
+        link = "https://www.google.com/search?q=___SEARCH___&tbm=isch";
+        break;
+      // case "search-eijiro":
+      //   link = "com.sokoide.ieijiro://query?input=___SEARCH___";
+      //   break;
+    }
+    return link.replace("___SEARCH___", text);
   }
   function handleSelection(event) {
-    var searchKind = document.getElementById('search-kind')
+    var searchKind = document.getElementById("search-kind");
     if (searchKind.contains(event.target)) {
-      setCurrentSearch(event.target.id)
+      setCurrentSearch(event.target.id);
     }
 
-    var text = window.getSelection().toString()
+    var text = window.getSelection().toString();
     if (text) {
-      var element = document.createElement('a')
-      element.setAttribute('href', getHref(text))
-      document.body.appendChild(element)
-      element.click()
-      element.remove()
-    }
-  }
-  function getSearchDicQuery() {
-    if (isIOS()) {
-      return 'mkwisdom://jp.monokakido.WISDOM/search?text=__SEARCH__'
-    } else {
-      return 'dict://__SEARCH__'
+      var element = document.createElement("a");
+      element.setAttribute("href", getSearchLink(getCurrentSearch(), text));
+      document.body.appendChild(element);
+      element.click();
+      element.remove();
     }
   }
   function isIOS() {
-    return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
   }
   function setStatus(text) {
-    document.getElementById('status').innerText = text
+    document.getElementById("status").innerText = text;
   }
 </script>
 ```
