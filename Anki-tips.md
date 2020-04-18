@@ -392,14 +392,15 @@ iPhone を右手で持ち、片手で操作した場合、`Mid Left` と `Mid Ce
 
 例えば以下のようなSIL(ALCが出している句動詞、熟語の頻出リスト)を覚える場合、とりあえずは受動的に理解できれば良いので、例文を主軸にカードをつくるような場合を想定している。
 
+<img src="./imgs/anki/search-on-select-card-fields.png" width="500">
+<img src="./imgs/anki/search-on-select.png" height="500">
+
 - 単語を選択した時点で、指定した検索エンジンで選択したテキストを検索する。
 - button に割り振った `id` は `getSearchLink` へのキーになる。
 - 例: "img"ボタン(`id="search-img"`)をクリックすると `https://www.google.com/search?q=___SEARCH___&tbm=isch`(`___SEARCH___` は選択した文字に置き換わる)が検索される。
 - 独自の辞書を追加したければ、 `button` を追加、`getSearchLink`を変更の２ステップで可能。コメントアウトされた `ieijiro` のサンプルが参考になるはず。
 - `search-dic` はiOSでは Wisdom 辞書に、macOS上ではシステム辞書に対応させている。
 - `rememberCurrentSearch`を`false`にすれば、直近の検索エンジンを記憶しないようになる。
-
-<img src="./imgs/anki/search-on-select.png" height="500">
 
 ## Action:Card
 
