@@ -392,8 +392,10 @@ iPhone を右手で持ち、片手で操作した場合、`Mid Left` と `Mid Ce
 
 例えば以下のようなSIL(ALCが出している句動詞、熟語の頻出リスト)を覚える場合、とりあえずは受動的に理解できれば良いので、例文を主軸にカードをつくるような場合を想定している。
 
+<p>
 <img src="./imgs/anki/search-on-select.png" height="500">
-<img src="./imgs/anki/search-on-select-card-fields.png" width="300">
+<img src="./imgs/anki/search-on-select-card-fields.png" width="400">
+</p>
 
 - 単語を選択した時点で、指定した検索エンジンで選択したテキストを検索する。
 - button に割り振った `id` は `getSearchLink` へのキーになる。
