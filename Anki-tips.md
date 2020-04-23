@@ -333,7 +333,8 @@ iPhone を右手で持ち、片手で操作した場合、`Mid Left` と `Mid Ce
 
 # TIPS: 覚えにくい単語を覚えやすくする為に画像を追加する
 
-この TIPS から [Accelerate Image Drag And Drop](https://ankiweb.net/shared/info/283563795) を作りました。よろしければ試してみてください。
+この TIPS から [Accelerate Image Drag And Drop](https://ankiweb.net/shared/info/283563795) を作りました。よろしければ試してみてください。  
+[2020/4/23日追加] このTIPSのやり方は古い。面倒だ。だから [bulk-screen-capture](https://github.com/t9md/bulk-screen-capture) を作った。CLI作業がくでなければ断然こちらをオススメする。  
 
 ## Motivation
 
