@@ -61,10 +61,10 @@ example: Process all records
 ```
 
 - `Pick answer index`, `Pick quiz index` とある。答えになるフィールドを `-a 数字`で指定し、クイズを挿入するフィールドを `-q 数字`で指定する。
-- `りんご` は 2フィールドなので `-a 2`、クイズを挿入する空フィールドは 4なので `-q 4`。これに `-c`(チェックオプション)をつけて実行する。
+- `りんご` は 2番フィールドなので `-a 2`、クイズを挿入する空フィールドは4番なので `-q 4`。これに `-c`(チェックオプション)をつけて実行する。
 
 ```sh
-$ scripts/add-quiz% ruby  add-quiz.rb  -a 2 -q 4 -c sample-notes.txt
+$ ruby  add-quiz.rb  -a 2 -q 4 -c sample-notes.txt
 {:answer=>2, :quiz=>4, :number_of_choice=>4, :check=>true}
  0: "apple"
  1: "\t"
@@ -113,7 +113,7 @@ $ ruby  add-quiz.rb sample-notes.txt -a 2 -q 4 > new-sample-notes.txt
 
 
 ```sh
-$ scripts/add-quiz% ruby add-quiz.rb SVL__g4.txt
+$ ruby add-quiz.rb SVL__g4.txt
  0: "9001"
  1: "\t"
  2: "10"
