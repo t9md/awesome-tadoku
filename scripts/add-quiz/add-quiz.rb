@@ -78,8 +78,12 @@ class CLI
       - Pick answer index, then pass it as -a options. e.g. -a 8
       - Pick quiz index(which should be empty field), then pass it as -q options. e.g. -q 10
 
-      example:
-        $ ruby add-quiz.rb -a 8 -q 10
+      example: Check with a very first line
+        $ ruby add-quiz.rb -a 8 -q 10 -c FILE
+
+      example: Process all records
+        $ ruby add-quiz.rb -a 8 -q 10 FILE > FILE-new
+
       USAGE
       exit 1
     end
