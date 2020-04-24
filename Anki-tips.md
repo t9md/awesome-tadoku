@@ -39,6 +39,9 @@
     * [Front](#front-4)
     * [Style](#style-4)
     * [Back](#back-1)
+* [TIPS: Quiz 化して未知単語を覚えやすくする](#tips-quiz-化して未知単語を覚えやすくする)
+  * [Motivation](#motivation-8)
+  * [Action](#action)
 <!-- TOC END -->
 
 # この文書について
