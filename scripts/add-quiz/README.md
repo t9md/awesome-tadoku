@@ -12,7 +12,7 @@
   * [Back](#back)
 * [想定される課題](#想定される課題)
     * [答えになるフィールドのテキスト処理に関する課題](#答えになるフィールドのテキスト処理に関する課題)
-    * [選択肢が毎回おなじなんだけど？](#選択肢が毎回おなじなんだけど)
+    * [選択肢が毎回同じなのですが。。](#選択肢が毎回同じなのですが)
     * [カードタイプ？ノート？どうやってこなしていく？](#カードタイプノートどうやってこなしていく)
 <!-- TOC END -->
 
@@ -97,21 +97,25 @@ $ ruby  add-quiz.rb sample-notes.txt -a 2 -q 4 > sample-notes-new.txt
 ```
 
 この sample-notes-new.txt を Anki にインポートするイメージだ。  
-以上でウォーミングアップは終了！Good Job!！
+これでウォーミングアップは終了！Good Job!！
 
 # 1. 既存ノートにクイズ用フィールドを追加する
 
-ここから実践編だ。
+ここからは実践編だ。
+まず、Ankiのブラウザからクイズを追加したいデッキを選び、カードにクイズを設定する空のフィールドを追加しよう。  
+↓ では `quiz` というフィールドを追加している。
 
 <p><img src="../../imgs/anki/quiz-1.png" width="400"></p>
 
 # 2. テキストファイル形式(txt) でエクスポートする(txt-1)
 
+デッキまるごとエクスポートしよう。形式は `Notes in Plain Text(*.txt)` を選ぶ。
 
 <p><img src="../../imgs/anki/quiz-2.png" width="400"></p>
 
 # 3. スクリプトで txt-1 にクイズを追加し、新しい txt-2 を作る
 
+`add-quiz.rb` スクリプトにエクスポートしたファイルを渡して実行しよう。
 
 ```sh
 $ ruby add-quiz.rb SVL__g4.txt
@@ -193,19 +197,17 @@ $ ruby add-quiz.rb SVL__g4.txt -a 8 -q 10 > SVL__g4-new.txt
 
 # 5. 新しいカードタイプを作って、クイズ用のコード、CSSを追加
 
-デッキのカードの編集画面で、カードタイプを追加しよう。"Rename Card Type..."で、新しく追加したカードタイプの名前をわかりやすい名前をつけよう(quiz とかが良いかもね！).
-追加したカードタイプのテンプレートを編集しよう。
+デッキのカードの編集画面で、カードタイプを追加しよう。"Rename Card Type..."で、新しく追加したカードタイプに、分かりやすい名前をつけよう(quiz とかが良いかも).  
+追加したカードタイプのテンプレートを編集して、クイズが表示されるようにしよう。
 
 <img src="../../imgs/anki/quiz-4.png" width="400">
 
 ## Front
 
 ```html
-<div id="front">
-  {{word}}
-  <hr>
-  {{quiz}}
-</div>
+{{word}}
+<hr>
+{{quiz}}
 
 <script>
   // これは表面が表示された時にクイズの選択肢をシャッフルするためのコード。
@@ -239,23 +241,19 @@ hr {
   border: 1px dotted #8c8b8b;
   border-color: darkgray;
 }
-
-#quiz {
-  font-size: 0.8em;
-}
+#quiz { font-size: 0.8em; }
 
 /* 背面の "back" コンテナ内の正解(id=quiz-answer)を太字にし、青字にする。 */
 #back #quiz-answer {
   font-weight: bold;
   color: cornflowerblue;
 }
-
 ```
 
 ## Back
 
 ```html
-<div id="back" class="back">
+<div id="back">
   {{FrontSide}}
 </div>
 ```
@@ -278,7 +276,7 @@ def extract_meaning(s)
 end
 ```
 
-### 選択肢が毎回おなじなんだけど？
+### 選択肢が毎回同じなのですが。。
 
 ノートに静的にクイズが埋め込まれているのでこれは仕方ない。
 必要なら再度エクスポートして、スクリプトにかけてクイズを再度追加した後読み込むしかない。
