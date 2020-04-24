@@ -41,7 +41,7 @@
 `add-quiz.rb` にファイル名を与えて実行すると、１行目のレコードについて、フィールドのレポートが出る。
 
 ```sh
-$ ruby  add-quiz.rb sample-notes.txt
+$ ruby add-quiz.rb sample-notes.txt
  0: "apple"
  1: "\t"
  2: "りんご"
@@ -64,7 +64,7 @@ example: Process all records
 - `りんご` は 2番フィールドなので `-a 2`、クイズを挿入する空フィールドは4番なので `-q 4`。これに `-c`(チェックオプション)をつけて実行する。
 
 ```sh
-$ ruby  add-quiz.rb  -a 2 -q 4 -c sample-notes.txt
+$ ruby add-quiz.rb  -a 2 -q 4 -c sample-notes.txt
 {:answer=>2, :quiz=>4, :number_of_choice=>4, :check=>true}
  0: "apple"
  1: "\t"
@@ -79,8 +79,8 @@ $ ruby  add-quiz.rb  -a 2 -q 4 -c sample-notes.txt
 
 最後に、`-c` オプションを消して、全レコードを処理してみよう。
 
-```
-$ ruby  add-quiz.rb sample-notes.txt -a 2 -q 4
+```sh
+$ ruby add-quiz.rb sample-notes.txt -a 2 -q 4
 apple   りんご  <ul id="quiz"><li id="quiz-answer">りんご</li><li>オレンジ</li><li>ライス</li><li>グレープ</li></ul>    last-field
 orange  オレンジ        <ul id="quiz"><li id="quiz-answer">オレンジ</li><li>グレープ</li><li>ライス</li><li>りんご</li></ul>    last-field
 grape   グレープ        <ul id="quiz"><li>帽子</li><li id="quiz-answer">グレープ</li><li>オレンジ</li><li>りんご</li></ul>      last-field
@@ -90,17 +90,18 @@ apple   りんご  <ul id="quiz"><li>オレンジ</li><li>帽子</li><li>ライ�
 master scripts/add-quiz%
 ```
 
-うまくいっている。これを新ファイルに書き出そう。
+うまくいっているようだ。これをファイルに書き出そう。
 
 ```
-$ ruby  add-quiz.rb sample-notes.txt -a 2 -q 4 > new-sample-notes.txt
+$ ruby  add-quiz.rb sample-notes.txt -a 2 -q 4 > sample-notes-new.txt
 ```
 
-以上でウォーミングアップは終了だ！ Good Job!
+この sample-notes-new.txt を Anki にインポートするイメージだ。  
+以上でウォーミングアップは終了！Good Job!！
 
 # 1. 既存ノートにクイズ用フィールドを追加する
 
-ここから実践辺だ。
+ここから実践編だ。
 
 <p><img src="../../imgs/anki/quiz-1.png" width="400"></p>
 
