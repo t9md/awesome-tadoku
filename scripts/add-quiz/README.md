@@ -212,14 +212,28 @@ $ ruby add-quiz.rb SVL__g4.txt -a 8 -q 10 > SVL__g4-new.txt
 <script>
   // これは表面が表示された時にクイズの選択肢をシャッフルするためのコード。
   // 答えを位置で覚えてしまうのを防ぐ為.
-  window.onload = function() {
-    if (!document.getElementById("back")) {
-      var ul = document.getElementById('quiz')
-      for (var i = ul.children.length; i >= 0; i--) {
-        ul.appendChild(ul.children[Math.random() * i | 0]);
+  function shuffleChildren(node, order) {
+    var newOrder = []
+    var isBack = !!window.quizShuffleOrder
+
+    for (var i = node.children.length; i >= 0; i--) {
+      var n
+      if (isBack) {
+        n = window.quizShuffleOrder.shift()
+      } else {
+        n = Math.random() * i | 0
       }
+      node.appendChild(node.children[n]);
+      newOrder.push(n)
+    }
+    window.quizShuffleOrder = newOrder
+    if (isBack) {
+      window.quizShuffleOrder = undefined
     }
   }
+
+  shuffleChildren(document.getElementById('quiz'))
+
 </script>
 ```
 
