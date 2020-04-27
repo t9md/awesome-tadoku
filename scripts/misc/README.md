@@ -1,3 +1,22 @@
+<!-- TOC START min:1 max:3 link:true asterisk:true update:true -->
+* [これは何？](#これは何)
+* [Examples](#examples)
+  * [ウォームアップ](#ウォームアップ)
+  * [画像へのリンクを追加する](#画像へのリンクを追加する)
+* [各スクリプトの説明](#各スクリプトの説明)
+  * [insert-field.rb](#insert-fieldrb)
+  * [extract-fields.rb](#extract-fieldsrb)
+  * [mapper.rb](#mapperrb)
+<!-- TOC END -->
+
+# これは何？
+
+デッキのテキスト加工処理にまつわるスクリプトを整理した。
+
+- エクスポートしたノートからフィールドを抜き出し/並び変え→ `extract-field.rb`
+- フィールドのテキストを加工する → `mapper.rb` (3つのサンプル含む)
+- 新しいフィールドを指定場所にインサート/上書き → `insert-field.rb`
+
 # Examples
 
 ## ウォームアップ
@@ -85,7 +104,7 @@ rice	ライス	( ライス )
 hat	帽子	( 帽子 )
 ```
 
-### 画像へのリンクを追加する
+## 画像へのリンクを追加する
 
 mapper の実装は以下
 ```ruby
@@ -134,7 +153,7 @@ $
 
 # 各スクリプトの説明
 
-# insert-field.rb
+## insert-field.rb
 
 `TARGET_FILE` の指定したフィールドに、FROM_FILEに 書かれたアイテムを一つずつ読み込んで挿入する。  
 
