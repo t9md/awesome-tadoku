@@ -214,3 +214,71 @@ $
 
 標準入力から来たテキストを加工して、標準出力に出す、超単純なフィルタ.
 毎回、必要に応じて適宜書き換えて使用することを想定。
+
+参考になるように、いくつかサンプルを作っておいた。
+
+- `parentheses`: `りんご` を `( りんご )` にする
+- `img_src`: `apple` を `<img src="google-img--apple.jpg">` する
+- `quiz`: `add-quiz.rb` と同じ事をする。
+
+```
+ARGF.each do |e|
+  puts parentheses(e.chomp)
+  # puts img_src(e.chomp)
+  # puts quiz(e.chomp)
+end
+```
+
+quiz が最も応用例なので、これだけ説明しておく。
+
+```
+$ cat sample-notes.txt
+apple   りんご          last-field
+orange  オレンジ                last-field
+grape   グレープ                last-field
+rice    ライス          last-field
+hat     帽子            last-field
+$ cat sample-notes.txt | extract-fields.rb -f1
+りんご
+オレンジ
+グレープ
+ライス
+帽子
+```
+
+ここがポイント。フィールド1を候補に自動でクイズの選択肢を作りたい為、`map` する時点で全ての選択肢を知っておく必要がある。なので `choices` ファイルに書き出しておく。
+`mapper.rb` はこの`choices` ファイルを読みこんで、クイズを生成した結果を返す。
+
+```
+$ cat sample-notes.txt | extract-fields.rb -f1 > choices
+$ cat sample-notes.txt | extract-fields.rb -f1 | ruby mapper.rb
+<ul id="quiz"><li id="quiz-answer">りんご</li><li>グレープ</li><li>帽子</li><li>オレンジ</li></ul>
+<ul id="quiz"><li id="quiz-answer">オレンジ</li><li>帽子</li><li>ライス</li><li>りんご</li></ul>
+<ul id="quiz"><li>オレンジ</li><li id="quiz-answer">グレープ</li><li>ライス</li><li>帽子</li></ul>
+<ul id="quiz"><li>りんご</li><li>帽子</li><li>オレンジ</li><li id="quiz-answer">ライス</li></ul>
+<ul id="quiz"><li>オレンジ</li><li>りんご</li><li id="quiz-answer">帽子</li><li>グレープ</li></ul>
+$
+```
+
+`items` に書き出して、インデックス2(`-i2`)を置き換え(`-r`)、`sample-notes-quiz.txt` に保存。これを Anki から読み込めば良い。
+
+```
+$ cat sample-notes.txt | extract-fields.rb -f1 | ruby mapper.rb > items
+$ ruby insert-field.rb sample-notes.txt items
+ 0: "apple"
+ 1: "りんご"
+ 2: ""
+ 3: "last-field"
+
+Usage: add-quiz.rb [options] TARGET_FILE FROM_FILE
+    -i, --index VALUE                Index to insert/replace(-r) field. (default: )
+    -r, --replace                    Replace field insetead of insert(default behavior). (default: false)
+    -c, --check                      Check with first line. (default: false)
+master [1] scripts/misc% ruby insert-field.rb sample-notes.txt items -i2 -r
+apple   りんご  <ul id="quiz"><li id="quiz-answer">りんご</li><li>グレープ</li><li>オレンジ</li><li>帽子</li></ul>      last-field
+orange  オレンジ        <ul id="quiz"><li id="quiz-answer">オレンジ</li><li>ライス</li><li>帽子</li><li>グレープ</li></ul>      last-field
+grape   グレープ        <ul id="quiz"><li>帽子</li><li>ライス</li><li id="quiz-answer">グレープ</li><li>りんご</li></ul>        last-field
+rice    ライス  <ul id="quiz"><li id="quiz-answer">ライス</li><li>オレンジ</li><li>グレープ</li><li>りんご</li></ul>    last-field
+hat     帽子    <ul id="quiz"><li id="quiz-answer">帽子</li><li>りんご</li><li>オレンジ</li><li>ライス</li></ul>        last-field
+$ ruby insert-field.rb sample-notes.txt items -i2 -r > sample-notes-quiz.txt
+```
