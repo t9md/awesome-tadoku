@@ -274,7 +274,7 @@ Usage: add-quiz.rb [options] TARGET_FILE FROM_FILE
     -i, --index VALUE                Index to insert/replace(-r) field. (default: )
     -r, --replace                    Replace field insetead of insert(default behavior). (default: false)
     -c, --check                      Check with first line. (default: false)
-master [1] scripts/misc% ruby insert-field.rb sample-notes.txt items -i2 -r
+$ ruby insert-field.rb sample-notes.txt items -i2 -r
 apple   りんご  <ul id="quiz"><li id="quiz-answer">りんご</li><li>グレープ</li><li>オレンジ</li><li>帽子</li></ul>      last-field
 orange  オレンジ        <ul id="quiz"><li id="quiz-answer">オレンジ</li><li>ライス</li><li>帽子</li><li>グレープ</li></ul>      last-field
 grape   グレープ        <ul id="quiz"><li>帽子</li><li>ライス</li><li id="quiz-answer">グレープ</li><li>りんご</li></ul>        last-field
