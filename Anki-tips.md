@@ -50,6 +50,7 @@
 - [Ankiを始める/紹介する時に必要な情報を集めたページ](https://ei-raku.com/2018/06/learning-anki/) は必読、前提知識とする。  
 - 記述のスタイル: TIPS毎に、モチベーション(`Motivation`)を説明し、アクション(`Action`)で解決策を示す。
 - 俺の環境: MacBookPro と iPhone(AnkiMobile) です。Windows は持っていません。  
+- [参考 Tweet](https://twitter.com/t9md/status/1254682525571547136)
 
 # TIPS: 便利なリンクのセット
 
