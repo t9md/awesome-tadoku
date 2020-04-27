@@ -48,7 +48,7 @@ $ ruby insert-field.rb sample-notes.txt items
  1: "りんご"
  2: ""
 
-Usage: add-quiz.rb [options] TARGET_FILE FROM_FILE
+Usage: insert-field.rb [options] TARGET_FILE FROM_FILE
     -i, --index VALUE                Index to insert/replace(-r) field. (default: )
     -r, --replace                    Replace field insetead of insert(default behavior). (default: false)
     -c, --check                      Check with first line. (default: false)
@@ -114,7 +114,7 @@ $ ruby insert-field.rb sample.tsv items
  0: "tactic"
  1: "戦術、戦法、作戦"
 
-Usage: add-quiz.rb [options] TARGET_FILE FROM_FILE
+Usage: insert-field.rb [options] TARGET_FILE FROM_FILE
     -i, --index VALUE                Index to insert/replace(-r) field. (default: )
     -r, --replace                    Replace field insetead of insert(default behavior). (default: false)
     -c, --check                      Check with first line. (default: false)
@@ -140,7 +140,7 @@ $
 
 ```
 $ ruby insert-field.rb -h
-Usage: add-quiz.rb [options] TARGET_FILE FROM_FILE
+Usage: insert-field.rb [options] TARGET_FILE FROM_FILE
     -i, --index VALUE                Index to insert/replace(-r) field. (default: )
     -r, --replace                    Replace field insetead of insert(default behavior). (default: false)
     -c, --check                      Check with first line. (default: false)
@@ -270,7 +270,7 @@ $ ruby insert-field.rb sample-notes.txt items
  2: ""
  3: "last-field"
 
-Usage: add-quiz.rb [options] TARGET_FILE FROM_FILE
+Usage: insert-field.rb [options] TARGET_FILE FROM_FILE
     -i, --index VALUE                Index to insert/replace(-r) field. (default: )
     -r, --replace                    Replace field insetead of insert(default behavior). (default: false)
     -c, --check                      Check with first line. (default: false)
