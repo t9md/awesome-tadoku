@@ -40,54 +40,50 @@
 
 `add-quiz.rb` にファイル名を与えて実行すると、１行目のレコードについて、フィールドのレポートが出る。
 
-```sh
+```
 $ ruby add-quiz.rb sample-notes.txt
  0: "apple"
- 1: "\t"
- 2: "りんご"
- 3: "\t"
- 4: ""
- 5: "\t"
- 6: "last-field"
+ 1: "りんご"
+ 2: ""
+ 3: "last-field"
 
-- Pick answer index, then pass it as -a options. e.g. -a 8
-- Pick quiz index(which should be empty field), then pass it as -q options. e.g. -q 10
+- Pick answer index, then pass it as -a options. e.g. -a 0
+- Pick quiz index(which should be empty field), then pass it as -q options. e.g. -q 2
 
 example: Check with a very first line
-  $ ruby add-quiz.rb -a 8 -q 10 -c FILE
+  $ ruby add-quiz.rb -a 0 -q 2 -c FILE
 
 example: Process all records
-  $ ruby add-quiz.rb -a 8 -q 10 FILE > FILE-new
+  $ ruby add-quiz.rb -a 0 -q 2 FILE > FILE-new
+
+$
 ```
 
 - `Pick answer index`, `Pick quiz index` とある。答えになるフィールドを `-a 数字`で指定し、クイズを挿入するフィールドを `-q 数字`で指定する。
-- `りんご` は 2番フィールドなので `-a 2`、クイズを挿入する空フィールドは4番なので `-q 4`。これに `-c`(チェックオプション)をつけて実行する。
+- `りんご` は 1番フィールドなので `-a 1`、クイズを挿入する空フィールドは4番なので `-q 2`。これに `-c`(チェックオプション)をつけて実行する。
 
-```sh
-$ ruby add-quiz.rb  -a 2 -q 4 -c sample-notes.txt
-{:answer=>2, :quiz=>4, :number_of_choice=>4, :check=>true}
+```
+$ ruby add-quiz.rb sample-notes.txt -a 1 -q 2 -c
+{:answer=>1, :quiz=>2, :number_of_choice=>4, :check=>true}
  0: "apple"
- 1: "\t"
- 2: "りんご"
- 3: "\t"
- 4: "<ul id=\"quiz\"><li>グレープ</li><li>オレンジ</li><li>ライス</li><li id=\"quiz-answer\">りんご</li></ul>"
- 5: "\t"
- 6: "last-field"
+ 1: "りんご"
+ 2: "<ul id=\"quiz\"><li>帽子</li><li>グレープ</li><li>オレンジ</li><li id=\"quiz-answer\">りんご</li></ul>"
+ 3: "last-field"
+$
 ```
 
-フィールド4にクイズが挿入された。デフォルトで選択肢は 4つだ。この選択肢は他の行の同じフィールドの値を集めてランダムに選ばれている。`-n 3`として選択肢を３つにしたりもできる。
+フィールド2にクイズがセットされた。デフォルトで選択肢は 4つだ。この選択肢は他の行の同じフィールドの値を集めてランダムに選ばれている。`-n 3`として選択肢を３つにしたりもできる。
 
 最後に、`-c` オプションを消して、全レコードを処理してみよう。
 
-```sh
-$ ruby add-quiz.rb sample-notes.txt -a 2 -q 4
-apple   りんご  <ul id="quiz"><li id="quiz-answer">りんご</li><li>オレンジ</li><li>ライス</li><li>グレープ</li></ul>    last-field
-orange  オレンジ        <ul id="quiz"><li id="quiz-answer">オレンジ</li><li>グレープ</li><li>ライス</li><li>りんご</li></ul>    last-field
-grape   グレープ        <ul id="quiz"><li>帽子</li><li id="quiz-answer">グレープ</li><li>オレンジ</li><li>りんご</li></ul>      last-field
-rice    ライス  <ul id="quiz"><li>オレンジ</li><li>りんご</li><li id="quiz-answer">ライス</li><li>グレープ</li></ul>    last-field
-hat     帽子    <ul id="quiz"><li>りんご</li><li>オレンジ</li><li id="quiz-answer">帽子</li><li>ライス</li></ul>        last-field
-apple   りんご  <ul id="quiz"><li>オレンジ</li><li>帽子</li><li>ライス</li><li id="quiz-answer">りんご</li></ul>        last-field
-master scripts/add-quiz%
+```
+$ ruby add-quiz.rb sample-notes.txt -a 1 -q 2
+apple	りんご	<ul id="quiz"><li>帽子</li><li id="quiz-answer">りんご</li><li>ライス</li><li>グレープ</li></ul>	last-field
+orange	オレンジ	<ul id="quiz"><li>ライス</li><li>りんご</li><li>帽子</li><li id="quiz-answer">オレンジ</li></ul>	last-field
+grape	グレープ	<ul id="quiz"><li id="quiz-answer">グレープ</li><li>りんご</li><li>オレンジ</li><li>帽子</li></ul>	last-field
+rice	ライス	<ul id="quiz"><li id="quiz-answer">ライス</li><li>グレープ</li><li>りんご</li><li>オレンジ</li></ul>	last-field
+hat	帽子	<ul id="quiz"><li>グレープ</li><li id="quiz-answer">帽子</li><li>オレンジ</li><li>りんご</li></ul>	last-field
+$
 ```
 
 うまくいっているようだ。これをファイルに書き出そう。
@@ -117,73 +113,56 @@ $ ruby  add-quiz.rb sample-notes.txt -a 2 -q 4 > sample-notes-new.txt
 
 `add-quiz.rb` スクリプトにエクスポートしたファイルを渡して実行しよう。
 
-```sh
+```
 $ ruby add-quiz.rb SVL__g4.txt
  0: "9001"
- 1: "\t"
- 2: "10"
- 3: "\t"
- 4: "tactic"
- 5: "\t"
- 6: "[tǽktik]"
- 7: "\t"
- 8: "【名】戦術、戦法、作戦<br>"
- 9: "\t"
+ 1: "10"
+ 2: "tactic"
+ 3: "[tǽktik]"
+ 4: "【名】戦術、戦法、作戦<br>"
+ 5: ""
+ 6: ""
+ 7: "The teacher tried another <b>tactic</b> to get the students interested."
+ 8: "その教師は、生徒の興味をひこうとして、別のやり方を試してみた。"
+ 9: "\"<img src=\"\"google-img--tactic.jpg\"\">\""
 10: ""
-11: "\t"
-12: ""
-13: "\t"
-14: "The teacher tried another <b>tactic</b> to get the students interested."
-15: "\t"
-16: "その教師は、生徒の興味をひこうとして、別のやり方を試してみた。"
-17: "\t"
-18: "\"<img src=\"\"google-img--tactic.jpg\"\">\""
-19: "\t"
 
-- Pick answer index, then pass it as -a options. e.g. -a 8
-- Pick quiz index(which should be empty field), then pass it as -q options. e.g. -q 10
+- Pick answer index, then pass it as -a options. e.g. -a 1
+- Pick quiz index(which should be empty field), then pass it as -q options. e.g. -q 2
 
 example: Check with a very first line
-  $ ruby add-quiz.rb -a 8 -q 10 -c FILE
+  $ ruby add-quiz.rb -a 1 -q 2 -c FILE
 
 example: Process all records
-  $ ruby add-quiz.rb -a 8 -q 10 FILE > FILE-new
+  $ ruby add-quiz.rb -a 1 -q 2 FILE > FILE-new
 
-```
-
-フィールド8(`【名】戦術、戦法、作戦<br>`)を元にクイズを生成し、フィールド10に quiz を追加したいのでオプションは、`-a 8 -q 10` になる。
-これにチェックする為の、`-c` オプションを加え、うまくいくかチェックしてみよう。
-
-```
-$ ruby add-quiz.rb -a 8 -q 10 -c SVL__g4.txt
-{:answer=>8, :quiz=>10, :number_of_choice=>4, :check=>true}
- 0: "9001"
- 1: "\t"
- 2: "10"
- 3: "\t"
- 4: "tactic"
- 5: "\t"
- 6: "[tǽktik]"
- 7: "\t"
- 8: "【名】戦術、戦法、作戦<br>"
- 9: "\t"
-10: "<ul id=\"quiz\"><li>【名】選挙民</li><li id=\"quiz-answer\">【名】戦術</li><li>【形】大陸横断の</li><li>【形】少しずつの</li></ul>"
-11: "\t"
-12: ""
-13: "\t"
-14: "The teacher tried another <b>tactic</b> to get the students interested."
-15: "\t"
-16: "その教師は、生徒の興味をひこうとして、別のやり方を試してみた。"
-17: "\t"
-18: "\"<img src=\"\"google-img--tactic.jpg\"\">\""
-19: "\t"
 $
 ```
 
-↑  フィールド10に注目。クイズの HTMLフィールドが追加されたことが分かる。うまくいってそうなので、全部処理してファイルに書き出そう。
+フィールド4(`【名】戦術、戦法、作戦<br>`)を元にクイズを生成し、フィールド5に quiz を追加したいのでオプションは、`-a 4 -q 5` になる。
+これにチェックする為の、`-c` オプションを加え、うまくいくかチェックしてみよう。
 
 ```
-$ ruby add-quiz.rb SVL__g4.txt -a 8 -q 10 > SVL__g4-new.txt
+$ ruby add-quiz.rb SVL__g4.txt -a4 -q5 -c
+{:answer=>4, :quiz=>5, :number_of_choice=>4, :check=>true}
+ 0: "9001"
+ 1: "10"
+ 2: "tactic"
+ 3: "[tǽktik]"
+ 4: "【名】戦術、戦法、作戦<br>"
+ 5: "<ul id=\"quiz\"><li>【名】芝</li><li>【形】切り立った</li><li id=\"quiz-answer\">【名】戦術</li><li>【形】（危険などが）差し迫った</li></ul>"
+ 6: ""
+ 7: "The teacher tried another <b>tactic</b> to get the students interested."
+ 8: "その教師は、生徒の興味をひこうとして、別のやり方を試してみた。"
+ 9: "\"<img src=\"\"google-img--tactic.jpg\"\">\""
+10: ""
+$
+```
+
+↑  フィールド5に注目。クイズの HTMLフィールドが追加されたことが分かる。うまくいってそうなので、全部処理してファイルに書き出そう。
+
+```
+$ ruby add-quiz.rb SVL__g4.txt -a4 -q5 > SVL__g4-new.txt
 ```
 
 # 4. 新しくできたファイル(txt-2)を Anki にインポートする。

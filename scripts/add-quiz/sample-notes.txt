@@ -3,4 +3,3 @@ orange	オレンジ		last-field
 grape	グレープ		last-field
 rice	ライス		last-field
 hat	帽子		last-field
-apple	りんご		last-field

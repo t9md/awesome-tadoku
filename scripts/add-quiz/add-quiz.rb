@@ -2,7 +2,7 @@
 require 'optparse'
 require "pp"
 
-SPLITTER = /(\t)/
+SPLITTER = "\t"
 
 class CLI
   def parse_options(argv = ARGV)
@@ -53,7 +53,6 @@ class CLI
     %!<ul id="quiz">#{result.shuffle().join('')}</ul>!
   end
 
-
   def inspect_array_with_index(array)
     array.each_with_index do |e, idx|
       puts "%2d: #{e.inspect}" % idx
@@ -64,6 +63,10 @@ class CLI
     opts, args = parse_options
 
     file = ARGV.pop
+    unless file
+      usage
+      exit 1
+    end
 
     unless File.exists?(file)
       usage "File does not exists #{file}"
@@ -72,17 +75,17 @@ class CLI
     lines = File.readlines(file)
     unless opts[:answer] and opts[:quiz]
       line = lines.shift
-      self.inspect_array_with_index line.chomp.split(SPLITTER)
+      self.inspect_array_with_index line.chomp.split(SPLITTER, -1)
       puts <<~USAGE
 
-      - Pick answer index, then pass it as -a options. e.g. -a 8
-      - Pick quiz index(which should be empty field), then pass it as -q options. e.g. -q 10
+      - Pick answer index, then pass it as -a options. e.g. -a 1
+      - Pick quiz index(which should be empty field), then pass it as -q options. e.g. -q 2
 
       example: Check with a very first line
-        $ ruby add-quiz.rb -a 8 -q 10 -c FILE
+        $ ruby add-quiz.rb -a 1 -q 2 -c FILE
 
       example: Process all records
-        $ ruby add-quiz.rb -a 8 -q 10 FILE > FILE-new
+        $ ruby add-quiz.rb -a 1 -q 2 FILE > FILE-new
 
       USAGE
       exit 1
@@ -92,7 +95,7 @@ class CLI
     notes = []
 
     lines.each do |line|
-      fields = line.chomp.split(/(\t)/)
+      fields = line.chomp.split(SPLITTER, -1)
       notes.push(fields)
       answers.push(self.extract_meaning(fields[opts[:answer]]))
     end
@@ -106,7 +109,7 @@ class CLI
         self.inspect_array_with_index fields
         break
       end
-      puts fields.join('')
+      puts fields.join(SPLITTER)
     end
   end
 end
