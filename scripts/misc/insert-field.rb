@@ -23,7 +23,7 @@ class CLI
       check: false,
     }
 
-    op.banner = "Usage: add-quiz.rb [options] TARGET_FILE FROM_FILE"
+    op.banner = "Usage: insert-field [options] TARGET_FILE FROM_FILE"
     op.on('-i', '--index VALUE', "Index to insert/replace(-r) field. (default: #{opts[:index]})") {|v| opts[:index] = v.to_i }
     op.on('-r', '--replace', "Replace field insetead of insert(default behavior). (default: #{opts[:replace]})") {|v| opts[:replace] = v }
     op.on('-c', '--check', "Check with first line. (default: #{opts[:check]})") {|v| opts[:check] = v }
