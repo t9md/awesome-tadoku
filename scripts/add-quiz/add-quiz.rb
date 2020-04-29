@@ -41,8 +41,8 @@ class CLI
 
   def extract_meaning(s)
     # s.match(/【(.)】(.+?)(?:[、。]|(:?<br>)|$)/)
-    s.match(/(.+?)(?:[、。]|(:?<br>)|$)/)
-    $1
+    s.match(/(.+?)(?:[、。;,\/]|(:?<br>)|$)/)
+    ($1).strip
   end
 
   def get_choices(answer, choices, num_of_choice)

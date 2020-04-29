@@ -14,9 +14,17 @@ end
 # - `extract_meaning` eliminate verbose text to make quiz choice simple.
 def extract_meaning(s)
   # s.match(/【(.)】(.+?)(?:[、。]|(:?<br>)|$)/)
-  s.match(/(.+?)(?:[、。]|(:?<br>)|$)/)
-  $1
+  s.match(/(.+?)(?:[、。;,\/]|(:?<br>)|$)/)
+  $1.strip
+
+  # s.gsub(/《.+?》/, "")
+  #  .gsub(/\(.+?\)/, "")
+  #  .gsub(/\[.+?\]/, "")
+  #  .gsub(/〈.+?〉/, "")
+  #  .match(/(.+?)(?:[、。;,\/]|(:?<br>)|$)/)
+  # $1.strip
 end
+
 
 
 QUIZ_FILE = "./choices"
@@ -41,6 +49,7 @@ end
 
 ARGF.each do |e|
   # puts parentheses(e.chomp)
+  # puts extract_meaning(e.chomp)
   # puts img_src(e.chomp)
   puts quiz(e.chomp)
 end
