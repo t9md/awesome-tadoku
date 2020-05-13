@@ -89,7 +89,7 @@ $
 うまくいっているようだ。これをファイルに書き出そう。
 
 ```
-$ ruby  add-quiz.rb sample-notes.txt -a 2 -q 4 > sample-notes-new.txt
+$ ruby  add-quiz.rb sample-notes.txt -a 1 -q 2 > sample-notes-new.txt
 ```
 
 この sample-notes-new.txt を Anki にインポートするイメージだ。  
