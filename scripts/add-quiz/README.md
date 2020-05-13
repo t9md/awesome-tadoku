@@ -199,6 +199,7 @@ $ ruby add-quiz.rb SVL__g4.txt -a4 -q5 > SVL__g4-new.txt
   function shuffleChildren(node, order) {
     var newOrder = []
     var wasBack = isBack()
+    var n
 
     for (var i = node.children.length; i >= 0; i--) {
       if (wasBack) {
