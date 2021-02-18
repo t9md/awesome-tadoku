@@ -1,27 +1,26 @@
-<!-- TOC START min:1 max:3 link:true update:true -->
-- [人・Blog](#人blog)
-  - [先人達の記事](#先人達の記事)
-  - [多読って有用なの？そもそも何？的な疑問に対する回答](#多読って有用なのそもそも何的な疑問に対する回答)
-  - [その他](#その他)
-  - [本を選ぶ時に参考になるサイト](#本を選ぶ時に参考になるサイト)
-- [図書館・多読ブッククラブ](#図書館多読ブッククラブ)
-- [サービス・ツール](#サービスツール)
-  - [レプトン・リーディングファーム](#レプトンリーディングファーム)
-  - [Scribd](#scribd)
-  - [Netflix](#netflix)
-  - [Mouse Dictionary](#mouse-dictionary)
-- [その他](#その他-1)
-  - [リスニング](#リスニング)
-  - [ライティング](#ライティング)
-  - [発音](#発音)
-    - [ELSA Speak](#elsa-speak)
-    - [tophonetics](#tophonetics)
-    - [iPhone/macOS のスピーチ機能](#iphonemacos-のスピーチ機能)
-    - [洋楽を歌う](#洋楽を歌う)
-    - [Articulation](#articulation)
-- [英会話, fluency](#英会話-fluency)
-- [CHANGELOG](#changelog)
-
+<!-- TOC START min:1 max:3 link:true asterisk:true update:true -->
+* [人・Blog](#人blog)
+  * [先人達の記事](#先人達の記事)
+  * [多読って有用なの？そもそも何？的な疑問に対する回答](#多読って有用なのそもそも何的な疑問に対する回答)
+  * [その他](#その他)
+  * [本を選ぶ時に参考になるサイト](#本を選ぶ時に参考になるサイト)
+* [図書館・多読ブッククラブ](#図書館多読ブッククラブ)
+* [サービス・ツール](#サービスツール)
+  * [レプトン・リーディングファーム](#レプトンリーディングファーム)
+  * [Scribd](#scribd)
+  * [Netflix](#netflix)
+  * [Mouse Dictionary](#mouse-dictionary)
+* [その他](#その他-1)
+  * [リスニング](#リスニング)
+  * [ライティング](#ライティング)
+  * [発音](#発音)
+    * [ELSA Speak](#elsa-speak)
+    * [tophonetics](#tophonetics)
+    * [iPhone/macOS のスピーチ機能](#iphonemacos-のスピーチ機能)
+    * [洋楽を歌う](#洋楽を歌う)
+    * [Articulation](#articulation)
+* [英会話, fluency](#英会話-fluency)
+* [CHANGELOG](#changelog)
 <!-- TOC END -->
 
 多読を行っている t9md が多読を始める(実は再開)にあたり有用と思った情報をまとめて、コメントしてます。
@@ -90,6 +89,10 @@
 
 - 動画サービス。月額制。Amazon Video と違い字幕版と吹替版で動画が分かれていない。一つの動画で字幕や音声言語を選べる。Amazon Videoでは出来ない字幕を消すことや、日本語音声・英語字幕もできる。英語字幕があるのがリスニングを鍛える時に使える。
 - Chrome 拡張で、英語・日本語のダブル字幕同時表示ができるようにすることも出来る
+  - 一番オススメ: LLN(単語登録等一部の機能は有料だが、無料でほとんど事足りる)
+    - [Language Learning with Netflix](https://chrome.google.com/webstore/detail/language-learning-with-ne/hoombieeljmmljlkjmnheibnpciblicm)
+    - [Language Learning with Youtube](https://chrome.google.com/webstore/detail/language-learning-with-yo/jkhhdcaafjabenpmpcpgdjiffdpmmcjb)
+    - [Bookmarklet to copy subtitles when you are using LLN(for Netflix)+LLY(for Youtube)](https://gist.github.com/t9md/c5f73108265a1497289467580a3161eb)
   - 無料: [NflxMultiSubs](https://chrome.google.com/webstore/detail/nflxmultisubs-netflix-mul/pjhnilfooknlkdonmjnleaomamfehkli)
   - 有料: [Netflix 同時字幕で英語学習](https://chrome.google.com/webstore/detail/netflix-%E5%90%8C%E6%99%82%E5%AD%97%E5%B9%95%E3%81%A7%E8%8B%B1%E8%AA%9E%E5%AD%A6%E7%BF%92/gibmkmmdicoffkhjkfimmjkojjopoagg)
     - ちょい巻き戻しや、字幕位置の固定、再生スピードの変更、それぞれにショートカットが用意されている等、カユイところに手が届く感じ。
@@ -202,6 +205,7 @@ Amazon プライムに加入していれば聴けるプライムミュージッ�
 
 # CHANGELOG
 
+- 2020-05-14: LLN+LLY、及び字幕保存のBookmarkletへのリンクを追加
 - 2018-11-07: 英会話のコーナー + Bobさん、新井リオさんの記事へのリンクを追加、発音: ELSA Speak の紹介
 - 2018-10-29: ライティング、発音のセクションを追加
 - 2018-09-18: リスニング素材・本を選ぶ時に参考になるサイト・Brighture Blog への記事リンクを追加
