@@ -39,6 +39,12 @@
     * [Front](#front-4)
     * [Style](#style-4)
     * [Back](#back-1)
+* [TIPS: カードをめくると同時にリンクを開きたい](#tips-カードをめくると同時にリンクを開きたい)
+  * [Motivation](#motivation-8)
+  * [Action:Card](#actioncard-6)
+    * [Front](#front-5)
+    * [Back](#back-2)
+    * [Style](#style-5)
 <!-- TOC END -->
 
 # この文書について
@@ -696,4 +702,53 @@ image-caption {
     <div>{{image}}</div>
   </div>
 </div>
+```
+
+# TIPS: カードをめくると同時にリンクを開きたい
+
+## Motivation
+
+単語は日々覚えたい単語に出会った時に都度登録するので、登録作業を極力楽にしたい。
+英単語のみ登録しておき、カードをめくった時に辞書アプリで自動的に単語の意味を表示させれば、意味を登録しなくても良くなる。
+※ iPad の split view で開くことを左側にAnki, 右側に辞書アプリを開いて使うことを想定している。
+
+## Action:Card
+
+### Front
+
+```html
+<div class="word">{{word}}</div>
+```
+
+### Back
+
+```html
+{{FrontSide}}
+<hr id="answer">
+{{answer}}
+
+<a id="auto-click-link" href="mkdictionaries:///?text={{text:word}}&category=en"></a>
+
+<script>
+  function isIOS() {
+    return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  }
+  if (isIOS()) {
+    document.getElementById("auto-click-link").click();
+  }
+</script>
+```
+
+### Style
+
+```css
+.card {
+  font-family: arial;
+  font-size: 25px;
+  text-align: center;
+  color: black;
+  background-color: white;
+}
+
+#auto-click-link { display:none; }
 ```
