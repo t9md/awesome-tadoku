@@ -763,6 +763,7 @@ Ankiは一つのNote(レコード)から複数のカードタイプが作れる�
 <hr id="answer">
 {{answer}}
 
+<!-- category=en は僕が英英辞典を開きたいから設定している。この辺は好みで変更してください -->
 <a id="auto-click-link" href="mkdictionaries:///?text={{text:word}}&category=en"></a>
 
 <script>
